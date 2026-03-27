@@ -1,11 +1,13 @@
- ⚪ **AICENT**  💎 **RTTP**  🔴 **RPKI**  🟢 **ZCMK**  🟡 **GTIOT** 
+# 🧠 Aicent Stack: The Sovereign AI Nervous System
+
+⚪ **AICENT**  💎 **RTTP**  🔴 **RPKI**  🟢 **ZCMK**  🟡 **GTIOT** 
 <p align="left">
   <code> 🛠️ Build: Passing </code> &nbsp; 
   <code> 🦀 Language: Rust </code> &nbsp; 
   <code> 🛡️ Status: EVOLVING </code>
 </p>
 
-# 🧠 Aicent Stack: The Sovereign AI Nervous System
+
 # aicent - The brain of Aicent Stack
 ![Aicent](https://github.com/user-attachments/assets/956e7e99-d2c3-45fe-8070-95f2c2976a54)
 
