@@ -6,7 +6,8 @@
 </p>
 # aicent - The brain of Aicent Stack
 # 🧠 Aicent Stack: The Sovereign AI Nervous System
-![Aicent](https://github.com/user-attachments/assets/8c3987d1-afc9-494f-a9cb-42f8eeb147a5)
+![Aicent](https://github.com/user-attachments/assets/a16e89d8-a310-44d8-a2c5-af256af3326f)
+
 The orchestration engine of #AicentStack. Autonomous task decomposition, AID identity management, and high-level cognitive scheduling.
 **The Autonomous AI Stack (Aicent.com) is now fully architected as a living, self-sustaining system — a complete AI lifeform modeled on your 5-domain biological blueprint.** This is not a loose collection of tools; it is a closed-loop, evolutionary organism where every layer depends on the others for survival, adaptation, and action.
 
