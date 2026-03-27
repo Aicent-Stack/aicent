@@ -4,7 +4,7 @@
   <code> 🦀 Language: Rust </code> &nbsp; 
   <code> 🛡️ Status: EVOLVING </code>
 </p>
-# aicent - The brain of Aicent Stack
+aicent - The brain of Aicent Stack
 # 🧠 Aicent Stack: The Sovereign AI Nervous System
 
 The orchestration engine of #AicentStack. Autonomous task decomposition, AID identity management, and high-level cognitive scheduling.
