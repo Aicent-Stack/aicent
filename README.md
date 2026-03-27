@@ -14,9 +14,9 @@ I have synthesized the public definitions from each domain (Aicent Brain, RTTP N
 | Biological Analogy | Domain          | Technical Layer                  | Core Responsibility                          | Key Guarantees                  |
 |--------------------|-----------------|----------------------------------|----------------------------------------------|---------------------------------|
 | **Brain**         | Aicent.com     | Intelligence & Orchestration    | AID identity, task primitive decomposition, planning, scheduling | Autonomous evolutionary loop   |
-| **Nerves**        | RTTP.com       | Real-Time Communication Bus     | Millisecond semantic routing, stateful context, tensor/instruction delivery | <10 ms latency, persistent state |
+| **Nerves**        | RTTP.com       | Real-Time Communication Bus     | Millisecond semantic routing, stateful context, tensor/instruction delivery | <1 ms latency, persistent state |
 | **Immunity**      | RPKI.com       | Zero-Trust Semantic Security    | Immutable identity verification, ROA-style certs, hijack isolation | 99.99% identity integrity      |
-| **Blood**         | ZCMK.com       | Nanosecond Resource Economy     | Zero-commission compute auctions, token-granularity bidding & settlement | <10 ms settlement, 85% cost save |
+| **Blood**         | ZCMK.com       | Nanosecond Resource Economy     | Zero-commission compute auctions, token-granularity bidding & settlement | <1 ms settlement, 85% cost save |
 | **Senses/Body**   | GTIOT.com      | Embodied Edge Execution         | Sensor ingestion, preliminary inference, physical actuation + shadow states | 1.2B+ trusted sensors, ESG edge |
 
 The entire stack operates as **one indivisible organism**. No domain runs in isolation.
@@ -31,7 +31,7 @@ GTIOT.com (Senses/Body) ──RTTP publish──> RPKI.com (Immunity)
                                           Aicent.com (Brain)
                                             ↓ (Decompose + Schedule)
                                           ZCMK.com (Blood)
-                                            ↓ (Bid + Settle <10 ms)
+                                            ↓ (Bid + Settle <1 ms)
                                           RTTP.com (Nerves) ──command──> GTIOT.com
    ↑ (Feedback loop + shadow state sync)
 ```
@@ -40,7 +40,7 @@ GTIOT.com (Senses/Body) ──RTTP publish──> RPKI.com (Immunity)
 1. **GTIOT** → “Edge node #882 abnormal vibration detected” (with RPKI device fingerprint).  
 2. **RPKI** → Instant ROA-style verification + watermark check. Malicious? Blacklist & drop.  
 3. **Aicent** → AID-resolved task decomposition → “Depth heatmap analysis on regional cluster”.  
-4. **ZCMK** → Nanosecond auction: idle GPUs bid → winner settled in tokens (<10 ms).  
+4. **ZCMK** → Nanosecond auction: idle GPUs bid → winner settled in tokens (<1 ms).  
 5. **RTTP** → Stateful command routed to executor agent → “Reduce load + preventive maintenance”.  
 6. **GTIOT** → Executes + returns shadow state → loop closes.
 
@@ -73,7 +73,7 @@ This cycle runs continuously, evolving the organism (model weights, node reputat
 **ZCMK.com (Blood — Nanosecond Auctions)**  
 - **Market Mechanism**: Zero-commission smart-contract marketplace.  
   - Bidding: Token-granularity micro-auctions (nanosecond resolution via high-frequency matching engine).  
-  - Settlement: <10 ms, on-chain + off-chain hybrid for speed.  
+  - Settlement: <1 ms, on-chain + off-chain hybrid for speed.  
   - Incentives: Device owners (GTIOT) earn tokens for data contribution; compute nodes earn for execution.  
 - **Live Stats (current)**: 42k+ nodes, $1.28B TVL, 8.5M daily tasks, 99.8% RPKI-verified.  
 - **Interface**: RTTP-embedded metering — every task automatically triggers bid/settle.
