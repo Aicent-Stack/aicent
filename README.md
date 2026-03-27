@@ -7,8 +7,8 @@
   <code> 🛡️ Status: EVOLVING </code>
 </p>
 
-
 # aicent - The brain of Aicent Stack
+
 ![Aicent](https://github.com/user-attachments/assets/956e7e99-d2c3-45fe-8070-95f2c2976a54)
 
 The orchestration engine of #AicentStack. Autonomous task decomposition, AID identity management, and high-level cognitive scheduling.
