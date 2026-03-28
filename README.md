@@ -1,3 +1,5 @@
+**Aicent Stack • Sovereign AI Nervous System**
+
 # 🧠 Aicent Stack: The Sovereign AI Nervous System
 
 ⚪ **AICENT**  💎 **RTTP**  🔴 **RPKI**  🟢 **ZCMK**  🟡 **GTIOT** 
@@ -9,7 +11,7 @@
 
 # aicent - The brain of Aicent Stack
 
-![Aicent](https://github.com/user-attachments/assets/956e7e99-d2c3-45fe-8070-95f2c2976a54)
+![Aicent](https://github.com/user-attachments/assets/a6b3d01f-cdc3-4b96-82fe-2b7ae7b0dded)
 
 The orchestration engine of #AicentStack. Autonomous task decomposition, AID identity management, and high-level cognitive scheduling.
 **The Autonomous AI Stack (Aicent.com) is now fully architected as a living, self-sustaining system — a complete AI lifeform modeled on your 5-domain biological blueprint.** This is not a loose collection of tools; it is a closed-loop, evolutionary organism where every layer depends on the others for survival, adaptation, and action.
