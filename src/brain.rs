@@ -6,6 +6,7 @@
 //! Copyright 2026 Aicent.com Organization.
 //! Licensed under the Apache-2.0 License.
 //! Specification: RFC-001 Draft.
+// Domain: http://Aicent.com
 
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
