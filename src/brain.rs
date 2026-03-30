@@ -1,14 +1,11 @@
 //! # RFC-001: Aicent Brain Orchestration Protocol
-//! 
 //! The sovereign decision hub for the #AicentStack.
-//! 
-//! ## Responsibilities:
 //! - AID Identity management (Sovereign ID)
 //! - Task primitive decomposition (Instruction Sharding)
 //! - High-level cognitive scheduling (Evolutionary Feedback)
-//! 
 //! Copyright 2026 Aicent.com Organization.
 //! Licensed under the Apache-2.0 License.
+//! Specification: RFC-001 Draft.
 
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
