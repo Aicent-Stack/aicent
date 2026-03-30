@@ -1,5 +1,9 @@
-//! Aicent Brain Demo
-//! AID Identity + Task Primitives Breakdown Demonstration
+// Aicent Stack | AICENT (The Brain)
+// Domain: https://aicent.com
+// Purpose: AID Identity + Task Primitive Decomposition Demonstration
+// Specification: RFC-001 Draft. 
+// License: Apache-2.0 via Aicent.com Organization.
+//! # RFC-001 Demo: Brain Orchestration Logic
 
 use aicent::brain::Brain;
 
