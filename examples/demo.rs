@@ -1,5 +1,5 @@
 // Aicent Stack | AICENT (The Brain)
-// Domain: https://aicent.com
+// Domain: http://aicent.com
 // Purpose: AID Identity + Task Primitive Decomposition Demonstration
 // Specification: RFC-001 Draft. 
 // License: Apache-2.0 via Aicent.com Organization.
