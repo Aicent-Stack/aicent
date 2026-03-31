@@ -27,11 +27,11 @@ I have synthesized the public definitions from each domain (Aicent Brain, RTTP N
 
 | Biological Analogy | Domain          | Technical Layer                  | Core Responsibility                          | Key Guarantees                  |
 |--------------------|-----------------|----------------------------------|----------------------------------------------|---------------------------------|
-| **Brain**         | Aicent.com     | Intelligence & Orchestration    | AID identity, task primitive decomposition, planning, scheduling | Autonomous evolutionary loop   |
-| **Nerves**        | RTTP.com       | Real-Time Communication Bus     | Millisecond semantic routing, stateful context, tensor/instruction delivery | <1 ms latency, persistent state |
-| **Immunity**      | RPKI.com       | Zero-Trust Semantic Security    | Immutable identity verification, ROA-style certs, hijack isolation | 99.99% identity integrity      |
-| **Blood**         | ZCMK.com       | Nanosecond Resource Economy     | Zero-commission compute auctions, token-granularity bidding & settlement | <1 ms settlement, 85% cost save |
-| **Senses/Body**   | GTIOT.com      | Embodied Edge Execution         | Sensor ingestion, preliminary inference, physical actuation + shadow states | 1.2B+ trusted sensors, ESG edge |
+| **Brain**         | [Aicent.com](http://aicent.com) | Intelligence & Orchestration    | AID identity, task primitive decomposition, planning, scheduling | Autonomous evolutionary loop   |
+| **Nerves**        | [RTTP.com](http://rttp.com) | Real-Time Communication Bus     | Millisecond semantic routing, stateful context, tensor/instruction delivery | <1 ms latency, persistent state |
+| **Immunity**      | [RPKI.com](http://rpki.com) | Zero-Trust Semantic Security    | Immutable identity verification, ROA-style certs, hijack isolation | 99.99% identity integrity      |
+| **Blood**         | [ZCMK.com](http://zcmk.com) | Nanosecond Resource Economy     | Zero-commission compute auctions, token-granularity bidding & settlement | <1 ms settlement, 85% cost save |
+| **Senses/Body**   | [GTIOT.com](http://gtiot.com) | Embodied Edge Execution         | Sensor ingestion, preliminary inference, physical actuation + shadow states | 1.2B+ trusted sensors, ESG edge |
 
 The entire stack operates as **one indivisible organism**. No domain runs in isolation.
 
