@@ -1,12 +1,13 @@
 # 🧠 aicent: The Brain
 
+⚪ AICENT 💎 RTTP 🔴 RPKI 🟢 ZCMK 🟡 GTIOT
+
 **Sovereign Identity & Cognitive Orchestration Protocol [RFC-001]**
 
 [![RFC](https://img.shields.io/badge/RFC-001-white.svg)](https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-001-AICENT-BRAIN.md)
 [![Status](https://img.shields.io/badge/Status-Homeostasis-brightgreen.svg)](#)
 [![Org](https://img.shields.io/badge/Org-Aicent.com-blue.svg)](http://aicent.com)
 
-⚪ AICENT 💎 RTTP 🔴 RPKI 🟢 ZCMK 🟡 GTIOT
 ![Aicent](https://github.com/user-attachments/assets/e650c418-0d30-4fad-8f06-2cc0fe8990b2)
 
 > *"The brain is not just a processor; it is the orchestrator of life. It decomposes intent into action."*
