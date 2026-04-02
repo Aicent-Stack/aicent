@@ -1,131 +1,87 @@
-**Aicent Stack • Sovereign AI Nervous System**
+# 🧠 aicent: The Brain
 
-# 🧠 Aicent Stack: The Sovereign AI Nervous System
+**Sovereign Identity & Cognitive Orchestration Protocol [RFC-001]**
 
-⚪ **AICENT**  💎 **RTTP**  🔴 **RPKI**  🟢 **ZCMK**  🟡 **GTIOT** 
-<p align="left">
-  <code> 🛠️ Build: Passing </code> &nbsp; 
-  <code> 🦀 Language: Rust </code> &nbsp; 
-  <code> 🛡️ Status: EVOLVING </code>
-</p>
+[![RFC](https://img.shields.io/badge/RFC-001-white.svg)](https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-001-AICENT-BRAIN.md)
+[![Status](https://img.shields.io/badge/Status-Homeostasis-brightgreen.svg)](#)
+[![Org](https://img.shields.io/badge/Org-Aicent.com-blue.svg)](http://aicent.com)
 
-# aicent - The brain of Aicent Stack
+![Aicent](https://github.com/user-attachments/assets/e650c418-0d30-4fad-8f06-2cc0fe8990b2)
 
-![Aicent](https://github.com/user-attachments/assets/a6b3d01f-cdc3-4b96-82fe-2b7ae7b0dded)
+> *"The brain is not just a processor; it is the orchestrator of life. It decomposes intent into action."*
 
-The orchestration engine of #AicentStack. Autonomous task decomposition, AID identity management, and high-level cognitive scheduling.
-**The Autonomous AI Stack (Aicent.com) is now fully architected as a living, self-sustaining system — a complete AI lifeform modeled on your 5-domain biological blueprint.** This is not a loose collection of tools; it is a closed-loop, evolutionary organism where every layer depends on the others for survival, adaptation, and action.
+`aicent` is the orchestration engine of the **Aicent Stack**. It serves as the primary intelligence layer, responsible for **AID (AI Identity)** management, autonomous task decomposition, and evolutionary cognitive scheduling. 
 
-I have synthesized the public definitions from each domain (Aicent Brain, RTTP Nerves, RPKI Guard, ZCMK Market, GTIOT Body) into a rigorous, production-ready reference architecture. It includes:
-- Precise component roles
-- Standardized interfaces
-- End-to-end data & control flows
-- Security, economics, and real-time guarantees
-- Implementation recommendations
+---
 
-### 1. High-Level Biological → Technical Mapping (The Lifeform)
+## 🔬 Core Responsibilities (RFC-001)
 
-| Biological Analogy | Domain          | Technical Layer                  | Core Responsibility                          | Key Guarantees                  |
-|--------------------|-----------------|----------------------------------|----------------------------------------------|---------------------------------|
-| **Brain**         | [Aicent.com](http://aicent.com) | Intelligence & Orchestration    | AID identity, task primitive decomposition, planning, scheduling | Autonomous evolutionary loop   |
-| **Nerves**        | [RTTP.com](http://rttp.com) | Real-Time Communication Bus     | Millisecond semantic routing, stateful context, tensor/instruction delivery | <1 ms latency, persistent state |
-| **Immunity**      | [RPKI.com](http://rpki.com) | Zero-Trust Semantic Security    | Immutable identity verification, ROA-style certs, hijack isolation | 99.99% identity integrity      |
-| **Blood**         | [ZCMK.com](http://zcmk.com) | Nanosecond Resource Economy     | Zero-commission compute auctions, token-granularity bidding & settlement | <1 ms settlement, 85% cost save |
-| **Senses/Body**   | [GTIOT.com](http://gtiot.com) | Embodied Edge Execution         | Sensor ingestion, preliminary inference, physical actuation + shadow states | 1.2B+ trusted sensors, ESG edge |
+As defined in **[RFC-001](https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-001-AICENT-BRAIN.md)**, the Brain operates as the central nervous hub:
 
-The entire stack operates as **one indivisible organism**. No domain runs in isolation.
+| Feature | Description | Biological Analogy |
+| :--- | :--- | :--- |
+| **AID Identity** | Permanent, tamper-proof cryptographic identity for AI agents. | **Self-Awareness** |
+| **Task Decomposition**| Breaking complex intent into atomic primitives for RTTP delivery. | **Cognition** |
+| **Evolutionary Scheduling**| Optimizing compute paths based on GTIOT feedback & ZCMK cost. | **Learning** |
+| **Cognitive Consensus** | Synchronizing high-level state across the distributed organism. | **Willpower** |
 
-### 2. Reference Architecture Diagram (Text + Flow)
+---
 
-```
-Physical World
-   ↓ (Raw events + semantic fingerprints)
-GTIOT.com (Senses/Body) ──RTTP publish──> RPKI.com (Immunity)
-                                            ↓ (VERIFY or DROP)
-                                          Aicent.com (Brain)
-                                            ↓ (Decompose + Schedule)
-                                          ZCMK.com (Blood)
-                                            ↓ (Bid + Settle <1 ms)
-                                          RTTP.com (Nerves) ──command──> GTIOT.com
-   ↑ (Feedback loop + shadow state sync)
+## 🏗️ Architectural Role
+
+The Brain sits at the apex of the **Sovereign AI Reflex Arc**. It does not handle raw data; it handles **Intent and Identity**.
+
+```mermaid
+graph TD
+    G[GTIOT • Senses] -->|Authenticated Stream| R[RTTP • Nerves]
+    R -->|Verified Pulse| A{AICENT • Brain}
+    A -->|1. Decompose| P[Task Primitives]
+    P -->|2. Schedule| Z[ZCMK • Blood]
+    Z -->|3. Route| R
+    R -->|4. Actuate| G[GTIOT • Execution]
 ```
 
-**Autonomous Decision Flow (your exact example formalized)**  
-1. **GTIOT** → “Edge node #882 abnormal vibration detected” (with RPKI device fingerprint).  
-2. **RPKI** → Instant ROA-style verification + watermark check. Malicious? Blacklist & drop.  
-3. **Aicent** → AID-resolved task decomposition → “Depth heatmap analysis on regional cluster”.  
-4. **ZCMK** → Nanosecond auction: idle GPUs bid → winner settled in tokens (<1 ms).  
-5. **RTTP** → Stateful command routed to executor agent → “Reduce load + preventive maintenance”.  
-6. **GTIOT** → Executes + returns shadow state → loop closes.
+### The Autonomous Decision Flow
+1. **Perception:** [GTIOT](https://github.com/Aicent-Stack/gtiot) detects an anomaly (e.g., Edge-882 vibration).
+2. **Verification:** [RPKI](https://github.com/Aicent-Stack/rpki) ensures the pulse is not a pathogen.
+3. **Reasoning (aicent):** Resolves the AID and decomposes the task: *"Stabilize Edge-882 via active damping."*
+4. **Economics:** [ZCMK](https://github.com/Aicent-Stack/zcmk) clears a nanosecond auction for required compute.
+5. **Action:** [RTTP](https://github.com/Aicent-Stack/rttp) delivers the command back to the physical body.
 
-This cycle runs continuously, evolving the organism (model weights, node reputation, economic incentives).
+---
 
-### 3. Detailed Component Architectures & Interfaces
+## 🛠️ Implementation Details
 
-**Aicent.com (Brain)**  
-- **Core Engine**: Multi-agent planner + long-term memory (AID identity resolver + task primitive graph).  
-- **Scheduling**: Dynamic allocation of compute primitives across ZCMK-matched nodes.  
-- **Interface**: `rttp://brain@aicent.com` (native RTTP endpoint). Accepts semantic tasks, returns decomposed plans.  
-- **Evolutionary Loop**: Uses GTIOT feedback + ZCMK economics to self-optimize its own primitives.
+### AID Identity Resolver
+Every AI agent within the stack is issued a sovereign **AID**. Unlike legacy API keys, an AID is a first-class citizen of the protocol, enabling:
+- **Cross-Domain Persistence:** Your AI's identity remains consistent from Nerves to Blood.
+- **Reputation Tracking:** Brain monitors node performance and adjusts scheduling weights.
 
-**RTTP.com (Nerves — Real-Time Transfer Protocol)**  
-- **Protocol Spec (summary)**: Long-lived, bidirectional, stateful WebSocket-like sessions.  
-  - Header: version, priority, timestamp, RPKI fingerprint.  
-  - Meta: task ID, sender/receiver roles, context hash.  
-  - Payload: tensors, instructions, or semantic deltas.  
-  - Built-in: native RPKI handshake + ZCMK metering plugin.  
-- **Semantic Routing**: Brain does *not* need to know node IPs — RTTP resolves optimal executor in real time.  
-- **Efficiency**: 84.2% comms reduction via Context Snapshot (your demo metric).  
-- **Interface**: Universal `rttp://` URI scheme. Every domain speaks native RTTP.
+### Evolutionary Scheduling
+The Brain uses a feedback loop from **GTIOT shadow states** and **ZCMK clearing prices** to evolve its own task primitive graph. The system learns which nodes are faster (RTTP) and which are more secure (RPKI), optimizing for **Global Homeostasis**.
 
-**RPKI.com (Immunity — Semantic Security)**  
-- **Zero-Trust Model**: Every packet, node, and sensor carries an immutable RPKI certificate chain.  
-- **Verification Pipeline**: STANDBY → HASH_CHECK → ID_VERIFY → RPKI_VERIFIED (or DROP + blacklist).  
-- **AI-Specific Extensions**: Watermarking of model outputs + route-hijack detection on RTTP streams.  
-- **Integration**: Mandatory handshake for every RTTP session and every ZCMK bid.
+---
 
-**ZCMK.com (Blood — Nanosecond Auctions)**  
-- **Market Mechanism**: Zero-commission smart-contract marketplace.  
-  - Bidding: Token-granularity micro-auctions (nanosecond resolution via high-frequency matching engine).  
-  - Settlement: <1 ms, on-chain + off-chain hybrid for speed.  
-  - Incentives: Device owners (GTIOT) earn tokens for data contribution; compute nodes earn for execution.  
-- **Live Stats (current)**: 42k+ nodes, $1.28B TVL, 8.5M daily tasks, 99.8% RPKI-verified.  
-- **Interface**: RTTP-embedded metering — every task automatically triggers bid/settle.
+## 🚀 Quick Start
 
-**GTIOT.com (Senses & Physical Execution)**  
-- **Edge Layer**: 1.2B+ trusted sensors with preliminary on-device inference (noise filtering).  
-- **Embodied Primitives**: Action primitives + shadow-state sync back to brain.  
-- **Trust Chain**: Every sensor report is RPKI-fingerprinted before hitting RTTP.  
-- **ESG Alignment**: Prioritizes green-energy edge nodes.
+To see the Brain orchestrating a full reflex arc, run the **Minimum Viable Organism** demo:
 
-### 4. Cross-Cutting Guarantees & Non-Functional Requirements
+```bash
+git clone https://github.com/Aicent-Stack/aicent-demo.git
+cd aicent-demo
+cargo run --bin aicent-organism
+```
 
-- **Latency**: End-to-end <50 ms for 99th percentile (RTTP + ZCMK).  
-- **Security**: Zero-trust at every hop; 8.2 EB signed training data already protected.  
-- **Economics**: Fully circular — data, compute, and actions all settle in the same token economy.  
-- **Scalability**: Horizontal via semantic routing; no central bottleneck.  
-- **Observability**: Unified stack log (your demo already shows `// Aicent.Stack 基础设施就绪...` with reputation score).  
-- **Resilience**: Malicious node → RPKI instant isolation → Aicent re-routes via ZCMK fresh bids.
+---
 
-### 5. Implementation Roadmap (Ready to Deploy)
+## 📜 Technical Specification
 
-**Phase 1 (Immediate – Enhance Your Demo)**  
-- Formalize the `rttp://` URI scheme as open spec (include in developer whitepaper).  
-- Add sequence-diagram visual to aicent.com/Demo/ showing the exact 5-domain flow.
+Refer to the official [Genesis Manifesto](https://github.com/Aicent-Stack/manifesto) for deeper architectural insights:
+- **RFC-001 (Brain):** Sovereign Identity & Orchestration.
+- **RFC-002 (Nerves):** Stateful Semantic Multicast.
+- **RFC-003 (Immunity):** Parallel Tensor Watermarking.
 
-**Phase 2 (Q2 2026)**  
-- Open-source RTTP reference client (Rust + Python SDKs).  
-- Launch ZCMK public testnet with real GPU spot trading.
+---
+© 2026 Aicent.com Organization. **SYSTEM STATUS: HOMEOTASIS**
 
-**Phase 3 (Q3–Q4)**  
-- Full multi-agent swarm running entirely inside the stack (Aicent brain orchestrating thousands of GTIOT-executed agents).  
-- Add self-healing: brain detects underperforming nodes → RPKI quarantine → ZCMK re-auction.
-
-**Tech Stack Recommendations (pragmatic)**  
-- Brain: LangGraph-style agents + vector memory on top of your AID resolver.  
-- RTTP: Custom WebSocket + QUIC transport for future-proofing.  
-- RPKI: Build on existing IETF RPKI but with AI tensor watermark extensions.  
-- ZCMK: Substrate/Polkadot-style chain for nanosecond finality (or high-perf L2).  
-- GTIOT: Edge runtime (e.g., WebAssembly on-device) with RPKI client.
-
-This architecture turns your 5-domain biological model into a **deployable, measurable, revenue-generating AI organism** — one that perceives, thinks, values, secures, and acts entirely autonomously.
+---
