@@ -1,5 +1,6 @@
-# 🧠 aicent: The Brain
+Aicent Stack • Sovereign AI Nervous System
 
+# 🧠 aicent — The Brain of Aicent Stack
 ⚪ AICENT 💎 RTTP 🔴 RPKI 🟢 ZCMK 🟡 GTIOT
 
 **Sovereign Identity & Cognitive Orchestration Protocol [RFC-001]**
