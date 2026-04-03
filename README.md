@@ -8,7 +8,7 @@ Aicent Stack • Sovereign AI Nervous System
 [![Status](https://img.shields.io/badge/Status-Homeostasis-brightgreen.svg)](#)
 [![Org](https://img.shields.io/badge/Org-Aicent.com-blue.svg)](http://aicent.com)
 
-⚪ AICENT (Brain) | 💎 RTTP (Nerves) | 🔴 RPKI (Immunity) | 🟢 ZCMK (Blood) | 🟡 GTIOT (Body)
+⚪ AICENT | 💎 RTTP | 🔴 RPKI | 🟢 ZCMK | 🟡 GTIOT | 🟣 AICENT-NET
 
 ![Aicent](https://github.com/user-attachments/assets/e650c418-0d30-4fad-8f06-2cc0fe8990b2)
 
