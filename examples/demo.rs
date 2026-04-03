@@ -1,31 +1,42 @@
 // Aicent Stack | AICENT (The Brain)
 // Domain: http://aicent.com
-// Purpose: AID Identity + Task Primitive Decomposition Demonstration
-// Specification: RFC-001 Draft. 
-// License: Apache-2.0 via Aicent.com Organization.
-//! # RFC-001 Demo: Brain Orchestration Logic
+// Purpose: Unit Demonstration of AID Identity & Task Sharding (RFC-001)
+// License: Apache-2.0
 
-use aicent::brain::Brain;
+use aicent::brain::{Brain, SovereignAID};
 
 fn main() {
-    println!("🧠 Aicent Brain - The Decision Center of Sovereign Lifeform");
-    println!("====================================================");
+    println!("\x1b[1;37m🧠 AICENT BRAIN | Organ Function Test [RFC-001]\x1b[0m");
+    println!("----------------------------------------------------");
 
     let mut brain = Brain::new();
-    
-    let tasks = vec![
-        "Optimize 882 edge node vibration anomaly",
-        "Coordinate RTTP pulse with RPKI verification",
-        "Allocate ZCMK compute credits for GTIOT action",
+
+    // 1. Resolve a Sovereign Identity (AID)
+    let aid = SovereignAID {
+        fingerprint: [0x88; 32],
+        epoch: 1,
+        reputation: 0.99,
+    };
+    println!("🛡️  AID Resolved: 0x882_Alpha (Reputation: {})", aid.reputation);
+
+    // 2. High-level cognitive intent
+    let intents = vec![
+        "Stabilize Edge-882 vibration via active damping",
+        "Coordinate swarm resonance across Aicent.net Hive",
+        "Execute nanosecond resource auction via ZCMK",
     ];
 
-    for task in tasks {
-        let result = brain.decompose_task(task);
-        println!("📋 Task: {}", task);
-        println!("   → {}", result);
-        println!();
+    // 3. Demonstrate Task Sharding (Decomposition)
+    for intent in intents {
+        println!("\n🔮 Ingesting Intent: \"{}\"", intent);
+        let primitives = brain.decompose_task(&aid, intent);
+        
+        for p in primitives {
+            println!("   ↳ Sharded Primitive ID: 0x{:x}", p.primitive_id);
+            println!("     Target Endpoint: rttp://{}", p.semantic_target);
+        }
     }
 
-    println!("✅ Aicent Brain successfully decomposed 3 tasks.");
-    println!("   Sovereign decision-making loop initialized.");
+    println!("\n✅ RFC-001 Cognitive Cycle Test Complete.");
+    println!("   System status: HOMEOSTASIS.");
 }
