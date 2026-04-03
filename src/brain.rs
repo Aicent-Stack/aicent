@@ -5,7 +5,7 @@
 //! - High-level cognitive scheduling (Evolutionary Feedback)
 //! Copyright 2026 Aicent.com Organization.
 //! Licensed under the Apache-2.0 License.
-//! Specification: RFC-001 Draft.
+//! Specification: RFC-001 Standard (Active).
 // Domain: http://Aicent.com
 
 use serde::{Deserialize, Serialize};
