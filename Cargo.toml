@@ -1,12 +1,32 @@
 [package]
 name = "aicent"
+description = "Aicent Brain: Sovereign AI Identity and Cognitive Orchestration Protocol [RFC-001]"
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
 license.workspace = true
 repository.workspace = true
+homepage = "https://aicent.com"
+documentation = "https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-001-AICENT-BRAIN.md"
+keywords = ["sovereign-ai", "orchestration", "brain", "rfc-001", "aicent-stack"]
+categories = ["ai", "asynchronous", "science"]
 
 [dependencies]
+# --- Core Organism Linking ---
+# The Brain must coordinate with all other domains
+rttp.workspace = true
+rpki.workspace = true
+zcmk.workspace = true
+gtiot.workspace = true
+aicent-net.workspace = true
+
+# --- Logic & Data Handling ---
 serde.workspace = true
 anyhow.workspace = true
-tokio.workspace = true
+tokio = { workspace = true, features = ["full"] }
+tracing.workspace = true      # For high-fidelity cognitive telemetry
+async-trait = "0.1"           # Essential for defining orchestration traits
+
+[dev-dependencies]
+# For internal unit testing of the reflex arc
+tokio = { workspace = true, features = ["macros", "rt-multi-thread"] }
