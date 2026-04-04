@@ -6,18 +6,39 @@ edition.workspace = true
 authors.workspace = true
 license.workspace = true
 repository.workspace = true
+homepage = "https://aicent.com"
+documentation = "https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-001-AICENT-BRAIN.md"
+keywords = ["sovereign-ai", "orchestration", "cognitive-hub", "rfc-001", "aicent-stack"]
+categories = ["ai", "asynchronous", "science", "distributed-computing"]
+rust-version = "1.75"
 
 [dependencies]
-# --- Full Body Coordination ---
+# --- Core Domain Orchestration ---
+# The Brain orchestrates the nervous system and immune feedback loops.
 rttp.workspace = true
 rpki.workspace = true
 zcmk.workspace = true
 gtiot.workspace = true
 
-# --- Industrial-Grade Logic ---
-serde.workspace = true
+# --- Logic & Data Handling ---
+# Optimized for high-throughput cognitive pulse decomposition
+serde = { workspace = true, features = ["derive"] }
 anyhow.workspace = true
 tokio = { workspace = true, features = ["full"] }
-tracing.workspace = true
-async-trait.workspace = true
-once_cell.workspace = true
+tracing.workspace = true        # Industrial-grade telemetry for cognitive cycles
+async-trait.workspace = true    # Trait abstraction for Sovereign AID orchestration
+once_cell.workspace = true      # High-performance static state management
+
+# --- Future Hive Integration ---
+# [RFC-006] Pre-configured for collective resonance with the Aicent-Net Grid
+aicent-net = { workspace = true, optional = true }
+
+[features]
+default = ["std"]
+std = ["serde/std", "anyhow/std"]
+# [RFC-006] Enable collective Hive-Mind convergence
+hive-sync = ["aicent-net"]
+
+[dev-dependencies]
+# Benchmarking tools for sub-ms cognitive resolution
+criterion = "0.5"
