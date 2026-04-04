@@ -2,34 +2,35 @@
 name = "aicent"
 description = "Aicent Brain: Sovereign AI Identity and Cognitive Orchestration Protocol [RFC-001]"
 version.workspace = true
-edition = "2024" # Explicitly set edition for consistency
+edition = "2024" # Explicitly set edition to 2024 for full compatibility
 authors = ["Aicent Stack Team <lee@aicent.com>"]
 license = "Apache-2.0"
-repository = "https://github.com/Aicent-Stack/aicent" # Point to its own repository
-homepage = "http://aicent.com"
+repository = "https://github.com/Aicent-Stack/aicent" # Point to its own independent repository
+homepage = "https://aicent.com"
 documentation = "https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-001-AICENT-BRAIN.md"
-keywords = ["sovereign-ai", "orchestration", "cognitive-hub", "rfc-001", "aicent-stack"]
+keywords = ["sovereign-ai", "orchestration", "cognitive-hub", "rfc-001", "aicent-stack", "128-bit-atomic"]
 categories = ["ai", "asynchronous", "science", "distributed-computing"]
-rust-version = "1.85"
+rust-version = "1.85" # Explicitly set rust-version to 1.85 for consistency
 
 [dependencies]
-# --- Core Organism Linking (Unidirectional Dependency Flow) ---
+# --- Core Domain Orchestration (Unidirectional Dependency Flow) ---
 # The Brain orchestrates the nervous system (RTTP), immunity (RPKI), 
 # value metabolism (ZCMK), and physical execution (GTIOT).
-rttp = { workspace = true }
-rpki = { workspace = true }
-zcmk = { workspace = true }
-gtiot = { workspace = true }
+# All dependencies explicitly enable their 'std' feature for full compatibility.
+rttp = { workspace = true, features = ["std"] }
+rpki = { workspace = true, features = ["std"] }
+zcmk = { workspace = true, features = ["std"] }
+gtiot = { workspace = true, features = ["std"] }
 
 # [RFC-006] Optional integration with the Aicent-Net Hive for collective intelligence.
-# This dependency is explicitly optional to break the cyclic dependency.
-aicent-net = { workspace = true, optional = true } 
+# This dependency is explicitly optional to break the cyclic dependency with aicent-net.
+aicent-net = { workspace = true, optional = true, features = ["std"] } 
 
 # --- Cognitive Orchestration Primitives ---
 # High-fidelity tools for intent decomposition and state-manifold reasoning.
 serde = { workspace = true, features = ["derive"] }
 anyhow = { workspace = true }
-tokio = { workspace = true, features = ["full"] }
+tokio = { workspace = true, features = ["full"] } # Utilizes full Tokio for async orchestration
 tracing = { workspace = true }        # Industrial-grade telemetry for cognitive cycles
 async-trait = { workspace = true }    # Trait abstraction for Sovereign AID orchestration
 once_cell = { workspace = true }      # High-performance static state management
@@ -37,10 +38,11 @@ once_cell = { workspace = true }      # High-performance static state management
 [features]
 default = ["std"]
 # [Standard v1.0] Standard library support for general-purpose compute.
-std = ["serde/std", "anyhow/std", "rttp/std", "rpki/std", "zcmk/std", "gtiot/std", "tokio/full"] # Include tokio/full here
+# Explicitly re-exporting 'std' for all foundational dependencies.
+std = ["serde/std", "anyhow/std", "rttp/std", "rpki/std", "zcmk/std", "gtiot/std", "tokio/full"]
 
 # [RFC-006] Feature flag to enable collective Hive-Mind convergence.
-# This explicitly brings in aicent-net when hive-sync is needed.
+# This explicitly brings in 'aicent-net' when hive-sync is needed.
 hive-sync = ["aicent-net"] 
 
 [dev-dependencies]
