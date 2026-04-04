@@ -10,7 +10,7 @@
 
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
-use std::sync::atomic::{AtomicU128, Ordering}; // 🛡️ Restored 128-bit Sovereignty
+use std::sync::atomic::{AtomicU128, Ordering};
 
 /// [RFC-001] Sovereign AI Identity (AID)
 /// Represents a unique, cryptographically bound identity for an AI agent.
@@ -30,6 +30,16 @@ pub struct IdentityState {
     pub aid: SovereignAID,
     /// 128-bit hardware-locked state: [Reputation (f64 bits) | Epoch (u64)].
     pub state_manifold: AtomicU128, 
+}
+
+impl IdentityState {
+    /// Initializes an Identity State with a zero-epoch manifold.
+    pub fn new(aid: SovereignAID) -> Self {
+        Self {
+            aid,
+            state_manifold: AtomicU128::new(0),
+        }
+    }
 }
 
 /// [RFC-001] Task Primitive (Instruction Shard)
@@ -91,17 +101,12 @@ impl Brain {
     /// Updates an AID's reputation and epoch in a single CPU instruction.
     /// This is critical for instantaneous triage during RPKI security events.
     pub fn update_identity_standing(&self, state: &IdentityState, new_rep: f64, new_epoch: u64) {
-        // Pack the 64-bit float bits and the 64-bit epoch into a 128-bit word.
+        // [PERF] AtomicU128 packing: [f64 | u64] ensures no state-tearing.
         let packed = ((new_rep.to_bits() as u128) << 64) | (new_epoch as u128);
-        
-        // Atomic store with Release ordering to ensure visibility across the grid.
         state.state_manifold.store(packed, Ordering::Release);
         
         #[cfg(debug_assertions)]
-        log_brain(&format!(
-            "AID Standing calibrated at 128-bit resolution. Epoch: {}", 
-            new_epoch
-        ));
+        log_brain(&format!("AID Standing calibrated at 128-bit resolution. Epoch: {}", new_epoch));
     }
 
     /// [RFC-001] Cognitive Task Decomposition.
@@ -110,7 +115,6 @@ impl Brain {
     pub fn decompose_task(&self, aid: &SovereignAID, intent: &str) -> CognitivePulse {
         let mut primitives = Vec::new();
         
-        // Physical Mapping: Directing cognitive intent to the edge Body (GTIOT).
         primitives.push(TaskPrimitive {
             primitive_id: 0x882,
             semantic_target: "edge.actuation.damping".to_string(),
@@ -127,18 +131,12 @@ impl Brain {
     }
 
     /// [RFC-006] Hive Synchronization.
-    /// Aligns the local brain state with the Aicent.net Global Operational Grid.
-    /// Ensures individual reflexes contribute to collective swarm intelligence.
     pub fn sync_with_hive(&mut self, hive_state_hash: [u8; 32]) -> bool {
-        log_brain(&format!(
-            "Synchronizing with Aicent.net Hive: manifold 0x{:02x?}", 
-            &hive_state_hash[..4]
-        ));
-        // Cross-domain state alignment logic
+        log_brain(&format!("Syncing with Aicent.net Hive: hash 0x{:02x?}", &hive_state_hash[..4]));
         true
     }
 
-    /// Resolves an IdentityState via the RPKI (RFC-003) identity chain.
+    /// Resolves AID identity chain (RFC-003).
     pub fn resolve_identity(&self, fingerprint: [u8; 32]) -> Option<&IdentityState> {
         self.active_identities.get(&fingerprint)
     }
