@@ -31,12 +31,6 @@ tracing     = { workspace = true }        # Industrial-grade telemetry for cogni
 async-trait = { workspace = true }        # Trait abstraction for Sovereign AID orchestration
 once_cell   = { workspace = true }        # High-performance static state management
 
-[features]
-default = ["std"]
-std = ["serde/std", "anyhow/std", "rttp/std", "rpki/std", "zcmk/std", "gtiot/std"]
-# [RFC-006] Enable collective Hive-Mind convergence for planetary scaling
-hive-sync = ["aicent-net"]
-
 [dev-dependencies]
 # Benchmarking tools for validation of sub-ms cognitive resolution
 criterion = { workspace = true }
