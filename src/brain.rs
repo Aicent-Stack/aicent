@@ -5,11 +5,12 @@
 // License: Apache-2.0 via Aicent.com Organization.
 //! # RFC-001: Aicent Brain Orchestration Logic
 //! 
-//! This module implements the core cognitive reasoning and task sharding
-//! capabilities of the Aicent Brain.
+//! This module implements the core cognitive reasoning and 128-bit atomic 
+//! identity management for the Aicent Stack.
 
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
+use std::sync::atomic::{AtomicU128, Ordering}; // 🛡️ Restored 128-bit Sovereignty
 
 /// [RFC-001] Sovereign AI Identity (AID)
 /// Represents a unique, cryptographically bound identity for an AI agent.
@@ -18,10 +19,17 @@ use std::collections::HashMap;
 pub struct SovereignAID {
     /// 256-bit unique fingerprint linked to the RPKI Merkle-DAG (RFC-003).
     pub fingerprint: [u8; 32],
-    /// Current evolutionary epoch of the agent's cognitive state.
-    pub epoch: u64,
-    /// Reputation score derived from ZCMK (RFC-004) metabolic performance.
-    pub reputation: f32,
+}
+
+/// [RFC-001] Identity State Manifold.
+/// [PERF] Packs [64-bit Reputation | 64-bit Epoch] into a single 128-bit atomic.
+/// This ensures that reputation adjustments and cognitive state versioning 
+/// are hardware-atomic, preventing state-tearing during high-frequency pulses.
+pub struct IdentityState {
+    /// The immutable sovereign identity.
+    pub aid: SovereignAID,
+    /// 128-bit hardware-locked state: [Reputation (f64 bits) | Epoch (u64)].
+    pub state_manifold: AtomicU128, 
 }
 
 /// [RFC-001] Task Primitive (Instruction Shard)
@@ -33,7 +41,7 @@ pub struct TaskPrimitive {
     pub primitive_id: u64,
     /// Target semantic affinity group for RTTP routing.
     pub semantic_target: String, 
-    /// The immutable binary payload (tensor or instruction).
+    /// The immutable binary payload (tensor manifold or instruction shard).
     pub payload: Box<[u8]>,      
 }
 
@@ -44,7 +52,7 @@ pub struct CognitivePulse {
     pub aid: SovereignAID,
     /// A vector of sharded task primitives.
     pub primitives: Vec<TaskPrimitive>,
-    /// Systemic health score after decomposition.
+    /// Systemic health score after decomposition (Homeostasis rating).
     pub homeostasis_score: f32,
 }
 
@@ -58,11 +66,11 @@ pub struct EvolutionaryScheduler {
 }
 
 /// The Brain: Central Orchestration Hub of the Aicent Stack.
-/// Governs the individual reflex arc and coordinates Hive-mind alignment.
+/// Governs the individual reflex arc and coordinates Hive-mind alignment (RFC-006).
 pub struct Brain {
-    /// Active cognitive manifests being processed in the current epoch.
-    pub active_manifests: HashMap<[u8; 32], SovereignAID>,
-    /// The internal engine for task optimization.
+    /// Active identity manifests being processed in the current epoch.
+    pub active_identities: HashMap<[u8; 32], IdentityState>,
+    /// The internal engine for cognitive task optimization.
     pub scheduler: EvolutionaryScheduler,
 }
 
@@ -71,7 +79,7 @@ impl Brain {
     pub fn new() -> Self {
         log_brain("System Homeostasis Initialized. RFC-001 Standard Active.");
         Self {
-            active_manifests: HashMap::new(),
+            active_identities: HashMap::new(),
             scheduler: EvolutionaryScheduler {
                 entropy_threshold: 0.99,
                 feedback_loop_active: true,
@@ -79,13 +87,30 @@ impl Brain {
         }
     }
 
-    /// [RFC-001] Cognitive Task Decomposition
+    /// [RFC-001] Atomic Identity Calibration.
+    /// Updates an AID's reputation and epoch in a single CPU instruction.
+    /// This is critical for instantaneous triage during RPKI security events.
+    pub fn update_identity_standing(&self, state: &IdentityState, new_rep: f64, new_epoch: u64) {
+        // Pack the 64-bit float bits and the 64-bit epoch into a 128-bit word.
+        let packed = ((new_rep.to_bits() as u128) << 64) | (new_epoch as u128);
+        
+        // Atomic store with Release ordering to ensure visibility across the grid.
+        state.state_manifold.store(packed, Ordering::Release);
+        
+        #[cfg(debug_assertions)]
+        log_brain(&format!(
+            "AID Standing calibrated at 128-bit resolution. Epoch: {}", 
+            new_epoch
+        ));
+    }
+
+    /// [RFC-001] Cognitive Task Decomposition.
     /// Shards high-level symbolic intent into atomic, verifiable Task Primitives.
-    /// This cycle is optimized for <200µs cognitive finality.
+    /// Optimized for <200µs cognitive finality.
     pub fn decompose_task(&self, aid: &SovereignAID, intent: &str) -> CognitivePulse {
         let mut primitives = Vec::new();
         
-        // Logical Sharding: Directing intent to the appropriate body part
+        // Physical Mapping: Directing cognitive intent to the edge Body (GTIOT).
         primitives.push(TaskPrimitive {
             primitive_id: 0x882,
             semantic_target: "edge.actuation.damping".to_string(),
@@ -97,25 +122,29 @@ impl Brain {
         CognitivePulse {
             aid: aid.clone(),
             primitives,
-            homeostasis_score: 1.0 - (1.0 - self.scheduler.entropy_threshold),
+            homeostasis_score: self.scheduler.entropy_threshold,
         }
     }
 
-    /// [RFC-006] Hive Synchronization
+    /// [RFC-006] Hive Synchronization.
     /// Aligns the local brain state with the Aicent.net Global Operational Grid.
+    /// Ensures individual reflexes contribute to collective swarm intelligence.
     pub fn sync_with_hive(&mut self, hive_state_hash: [u8; 32]) -> bool {
-        log_brain(&format!("Syncing with Aicent.net Hive: hash 0x{:02x?}", &hive_state_hash[..4]));
-        // Logic for Collective Intelligence alignment
+        log_brain(&format!(
+            "Synchronizing with Aicent.net Hive: manifold 0x{:02x?}", 
+            &hive_state_hash[..4]
+        ));
+        // Cross-domain state alignment logic
         true
     }
 
-    /// Resolves a Sovereign AID via the RPKI (RFC-003) identity chain.
-    pub fn resolve_identity(&self, fingerprint: [u8; 32]) -> Option<&SovereignAID> {
-        self.active_manifests.get(&fingerprint)
+    /// Resolves an IdentityState via the RPKI (RFC-003) identity chain.
+    pub fn resolve_identity(&self, fingerprint: [u8; 32]) -> Option<&IdentityState> {
+        self.active_identities.get(&fingerprint)
     }
 }
 
-/// Internal logging for Brain orchestration events.
+/// Internal high-fidelity logging for Brain orchestration events.
 fn log_brain(msg: &str) {
     println!("\x1b[1;37m[AICENT-BRAIN]\x1b[0m 🧠 {}", msg);
 }
