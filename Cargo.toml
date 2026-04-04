@@ -10,7 +10,7 @@ homepage = "http://aicent.com"
 documentation = "https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-001-AICENT-BRAIN.md"
 keywords = ["sovereign-ai", "orchestration", "cognitive-hub", "rfc-001", "aicent-stack"]
 categories = ["ai", "asynchronous", "science", "distributed-computing"]
-rust-version = "1.75"
+rust-version = "1.85"
 
 [dependencies]
 # --- Core Organism Linking (Unidirectional Dependency Flow) ---
