@@ -2,6 +2,7 @@
 name = "aicent"
 description = "Aicent Brain: Sovereign AI Identity and Cognitive Orchestration Protocol [RFC-001]"
 version.workspace = true
+edition = "2024"
 edition.workspace = true
 authors.workspace = true
 license.workspace = true
