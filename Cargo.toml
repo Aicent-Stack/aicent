@@ -1,54 +1,62 @@
 [package]
 name = "aicent"
 description = "Aicent Brain: Sovereign AI Identity and Cognitive Orchestration Protocol [RFC-001]"
+# Inheriting core metadata from the imperial root workspace
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
 license.workspace = true
-repository = "https://github.com/Aicent-Stack/aicent" # Points to its own independent repository
+repository.workspace = true
 homepage = "http://aicent.com"
 documentation = "https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-001-AICENT-BRAIN.md"
-keywords = ["sovereign-ai", "orchestration", "cognitive-hub", "rfc-001", "aicent-stack", "128-bit-atomic"]
+rust-version.workspace = true
+
+# Keywords and categories for planetary-scale discoverability
+keywords = ["sovereign-ai", "orchestration", "cognitive-hub", "rfc-001", "128-bit-atomic"]
 categories = ["ai", "asynchronous", "science", "distributed-computing"]
-rust-version.workspace = true # Explicitly inherit rust-version for consistency
 
 [dependencies]
-# --- Core Domain Orchestration (Unidirectional Dependency Flow) ---
-# The Brain orchestrates the nervous system (RTTP), immunity (RPKI), 
-# value metabolism (ZCMK), and physical execution (GTIOT).
-rttp = { workspace = true }
-rpki = { workspace = true }
-zcmk = { workspace = true }
-gtiot = { workspace = true }
+# --- Core Organism Linking (Unidirectional Dependency Flow) ---
+# The Brain orchestrates the Nerves, Immunity, Blood, and Body layers.
+# These are strictly synchronized via the workspace manifest.
+rttp = { workspace = true, features = ["std"] }
+rpki = { workspace = true, features = ["std"] }
+zcmk = { workspace = true, features = ["std"] }
+gtiot = { workspace = true, features = ["std"] }
 
-# [RFC-006] Optional integration with the Aicent-Net Hive for collective intelligence.
-# This dependency is explicitly optional to break the cyclic dependency with aicent-net.
-aicent-net = { workspace = true, optional = true } 
+# [RFC-006] Optional integration with the Aicent-Net Hive.
+# Declared as optional to prevent cyclic dependencies while allowing Hive-Mind convergence.
+aicent-net = { workspace = true, optional = true, features = ["std"] }
 
 # --- Cognitive Orchestration Primitives ---
 # High-fidelity tools for intent decomposition and state-manifold reasoning.
-serde = { workspace = true, features = ["derive"] }
-anyhow = { workspace = true }
-tokio = { workspace = true } # Utilizes Tokio for async orchestration
-tracing = { workspace = true }        # Industrial-grade telemetry for cognitive cycles
-async-trait = { workspace = true }    # Trait abstraction for Sovereign AID orchestration
-once_cell = { workspace = true }      # High-performance static state management
+serde       = { workspace = true, features = ["derive"] }
+anyhow      = { workspace = true }
+tokio       = { workspace = true, features = ["full"] }
+tracing     = { workspace = true }        # Industrial-grade telemetry for cognitive cycles
+async-trait = { workspace = true }        # Trait abstraction for Sovereign AID orchestration
+once_cell   = { workspace = true }        # High-performance static state management for manifolds
 
 [features]
+# Standard implementation: Enables full feature-set for cloud-scale environments.
 default = ["std"]
+
 # [Standard v1.0] Standard library support for general-purpose compute.
-# Explicitly re-exporting 'std' for all foundational Aicent Stack dependencies.
+# This ensures that 'std' is propagated to all underlying organs to maintain homeostasis.
 std = [
-    "rttp/std", 
-    "rpki/std", 
-    "zcmk/std", 
-    "gtiot/std"
+    "serde/std",
+    "anyhow/std",
+    "rttp/std",
+    "rpki/std",
+    "zcmk/std",
+    "gtiot/std",
+    "tokio/full"
 ]
 
-# [RFC-006] Feature flag to enable collective Hive-Mind convergence.
-# This explicitly brings in 'aicent-net' when hive-sync is needed.
-hive-sync = ["aicent-net/std"] 
+# [RFC-006] Sovereign Hive-Mind Feature Flag.
+# Enabling this activates the global operational grid synchronization.
+hive-sync = ["aicent-net"]
 
 [dev-dependencies]
-# Benchmarking tools for validation of sub-ms cognitive resolution.
-criterion = { workspace = true }
+# Benchmarking tools for validating sub-millisecond cognitive reasoning finality.
+criterion = { workspace = true, features = ["async_tokio"] }
