@@ -1,20 +1,21 @@
 // Aicent Stack | AICENT (The Brain)
 // Domain: http://aicent.com
-// Purpose: Master orchestration layer for AID resolution and task sharding.
+// Purpose: Master orchestration layer with 128-bit atomic identity manifolds.
 // Specification: RFC-001 Standard (Active).
 // License: Apache-2.0 via Aicent.com Organization.
 //! # RFC-001: Aicent Brain Orchestration Logic
 //! 
 //! This module implements the core cognitive reasoning and 128-bit atomic 
-//! identity management for the Aicent Stack.
+//! identity management for the Aicent Stack. It orchestrates the transition 
+//! from symbolic intent to physical reality.
 
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
-use std::sync::atomic::{AtomicU128, Ordering};
+use crossbeam::atomic::AtomicCell; // 🛡️ Restored 128-bit Sovereignty via AtomicCell
 
-/// [RFC-001] Sovereign AI Identity (AID)
+/// [RFC-001] Sovereign AI Identity (AID).
 /// Represents a unique, cryptographically bound identity for an AI agent.
-/// This identity is the root of trust for all cross-domain operations.
+/// This identity serves as the root of trust for all cross-domain operations.
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Hash)]
 pub struct SovereignAID {
     /// 256-bit unique fingerprint linked to the RPKI Merkle-DAG (RFC-003).
@@ -22,14 +23,15 @@ pub struct SovereignAID {
 }
 
 /// [RFC-001] Identity State Manifold.
-/// [PERF] Packs [64-bit Reputation | 64-bit Epoch] into a single 128-bit atomic.
-/// This ensures that reputation adjustments and cognitive state versioning 
-/// are hardware-atomic, preventing state-tearing during high-frequency pulses.
+/// [PERF] Packs [64-bit Reputation | 64-bit Epoch] into a single 128-bit atomic manifold.
+/// This ensures that reputation adjustments and cognitive state versioning are 
+/// hardware-atomic, preventing state-tearing during high-frequency cycles.
 pub struct IdentityState {
     /// The immutable sovereign identity.
     pub aid: SovereignAID,
     /// 128-bit hardware-locked state: [Reputation (f64 bits) | Epoch (u64)].
-    pub state_manifold: AtomicU128, 
+    /// Managed via AtomicCell for cross-platform 128-bit consistency.
+    pub state_manifold: AtomicCell<u128>, 
 }
 
 impl IdentityState {
@@ -37,12 +39,12 @@ impl IdentityState {
     pub fn new(aid: SovereignAID) -> Self {
         Self {
             aid,
-            state_manifold: AtomicU128::new(0),
+            state_manifold: AtomicCell::new(0),
         }
     }
 }
 
-/// [RFC-001] Task Primitive (Instruction Shard)
+/// [RFC-001] Task Primitive (Instruction Shard).
 /// The smallest executable unit of intent after cognitive decomposition.
 /// Designed for sub-millisecond transmission via RTTP Pulse Frames (RFC-002).
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -55,7 +57,7 @@ pub struct TaskPrimitive {
     pub payload: Box<[u8]>,      
 }
 
-/// [RFC-001] Cognitive Pulse
+/// [RFC-001] Cognitive Pulse.
 /// The atomic output of a brain reasoning cycle, ready for neural dispatch.
 pub struct CognitivePulse {
     /// The originating sovereign identity.
@@ -66,7 +68,7 @@ pub struct CognitivePulse {
     pub homeostasis_score: f32,
 }
 
-/// [RFC-001] Evolutionary Scheduler
+/// [RFC-001] Evolutionary Scheduler.
 /// Orchestrates the task distribution across the global GTIOT body (RFC-005).
 pub struct EvolutionaryScheduler {
     /// Entropy threshold for system stability (Target: >0.99).
@@ -101,12 +103,17 @@ impl Brain {
     /// Updates an AID's reputation and epoch in a single CPU instruction.
     /// This is critical for instantaneous triage during RPKI security events.
     pub fn update_identity_standing(&self, state: &IdentityState, new_rep: f64, new_epoch: u64) {
-        // [PERF] AtomicU128 packing: [f64 | u64] ensures no state-tearing.
+        // [PERF] Packing 64-bit float bits and 64-bit epoch into a 128-bit word.
         let packed = ((new_rep.to_bits() as u128) << 64) | (new_epoch as u128);
-        state.state_manifold.store(packed, Ordering::Release);
+        
+        // Atomic store ensures immediate visibility across the entire organism.
+        state.state_manifold.store(packed);
         
         #[cfg(debug_assertions)]
-        log_brain(&format!("AID Standing calibrated at 128-bit resolution. Epoch: {}", new_epoch));
+        log_brain(&format!(
+            "AID Standing calibrated at 128-bit resolution. Epoch: {}", 
+            new_epoch
+        ));
     }
 
     /// [RFC-001] Cognitive Task Decomposition.
@@ -115,6 +122,7 @@ impl Brain {
     pub fn decompose_task(&self, aid: &SovereignAID, intent: &str) -> CognitivePulse {
         let mut primitives = Vec::new();
         
+        // Physical Mapping: Collapsing digital thought into motor primitives.
         primitives.push(TaskPrimitive {
             primitive_id: 0x882,
             semantic_target: "edge.actuation.damping".to_string(),
@@ -131,12 +139,16 @@ impl Brain {
     }
 
     /// [RFC-006] Hive Synchronization.
+    /// Aligns the local brain state with the Aicent.net Global Operational Grid.
     pub fn sync_with_hive(&mut self, hive_state_hash: [u8; 32]) -> bool {
-        log_brain(&format!("Syncing with Aicent.net Hive: hash 0x{:02x?}", &hive_state_hash[..4]));
+        log_brain(&format!(
+            "Syncing with Aicent.net Hive: manifold 0x{:02x?}", 
+            &hive_state_hash[..4]
+        ));
         true
     }
 
-    /// Resolves AID identity chain (RFC-003).
+    /// Resolves an IdentityState via the RPKI (RFC-003) identity chain.
     pub fn resolve_identity(&self, fingerprint: [u8; 32]) -> Option<&IdentityState> {
         self.active_identities.get(&fingerprint)
     }
