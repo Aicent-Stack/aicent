@@ -1,7 +1,6 @@
 [package]
 name = "aicent"
 description = "Aicent Brain: Sovereign AI Identity and Cognitive Orchestration Protocol [RFC-001]"
-# Inheriting core protocol DNA from the imperial root workspace
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
@@ -9,24 +8,18 @@ license.workspace = true
 repository.workspace = true
 homepage = "http://aicent.com"
 documentation = "https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-001-AICENT-BRAIN.md"
-rust-version.workspace = true
-
-# Keywords and categories for planetary-scale cognitive authority
 keywords = ["sovereign-ai", "orchestration", "cognitive-hub", "rfc-001", "128-bit-atomic"]
 categories = ["ai", "asynchronous", "science", "distributed-computing"]
+rust-version.workspace = true
 
 [dependencies]
-# --- Core Domain Orchestration (Unidirectional Dependency Flow) ---
-# The Brain orchestrates the individual reflex organs.
-# All dependencies explicitly enable 'std' features for full integration.
+# --- Core Domain Orchestration (Unidirectional Flow) ---
+# The Brain orchestrates the individual reflex organs (L0 & L1).
+# 🛡️ THE IMPERIAL DECOUPLING: aicent-net is removed to break the cyclic dependency.
 rttp  = { workspace = true, features = ["std"] }
 rpki  = { workspace = true, features = ["std"] }
 zcmk  = { workspace = true, features = ["std"] }
 gtiot = { workspace = true, features = ["std"] }
-
-# [RFC-006] Optional integration with the Aicent-Net Hive Grid.
-# Declared as optional to break the cyclic dependency with the Hive layer.
-aicent-net = { workspace = true, optional = true, features = ["std"] } 
 
 # --- Cognitive Orchestration Primitives ---
 # High-fidelity tools for intent decomposition and 128-bit state manifolds.
@@ -42,8 +35,7 @@ once_cell   = { workspace = true }        # Safe static management of global man
 default = ["std"]
 
 # [Standard v1.0] Standard library support for the cognitive hub.
-# 🛡️ FIX: Explicitly excluded 'smallvec/std' as it does not exist.
-# Re-exports 'std' for all foundational dependencies to maintain metabolic homeostasis.
+# All internal organs are synchronized to the 'std' state.
 std = [
     "serde/std", 
     "anyhow/std", 
@@ -54,9 +46,9 @@ std = [
     "tokio/full"
 ]
 
-# [RFC-006] Sovereign Hive-Mind Feature Flag.
-# Enabling this activates collective intelligence resonance with Aicent.net.
-hive-sync = ["aicent-net"]
+# [RFC-006] Future-proofing for Hive convergence.
+# Note: Hive logic is now handled as an external extension to prevent circularity.
+hive-ready = []
 
 [dev-dependencies]
 # Performance benchmarking for sub-200µs cognitive sharding finality.
