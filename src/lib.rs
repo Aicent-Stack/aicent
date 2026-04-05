@@ -4,11 +4,11 @@
 // Specification: RFC-001 Standard (Active).
 // License: Apache-2.0 via Aicent.com Organization.
 //! # RFC-001: Aicent Brain Orchestration Protocol
-//!
+//! 
 //! The `aicent` crate serves as the master decision-making hub for the Aicent Stack.
-//! It governs the sovereign lifecycle of AI agents through cognitive decomposition
+//! It governs the sovereign lifecycle of AI agents through cognitive decomposition 
 //! and evolutionary feedback loops across a six-domain biological architecture.
-//!
+//! 
 //! ### Core Governance:
 //! - **Sovereign AID Management**: Cryptographically bound 128-bit atomic identity resolution.
 //! - **Instruction Sharding**: Decomposing high-level symbolic intent into atomic motor primitives.
@@ -60,12 +60,10 @@ pub trait CognitiveOrchestrator {
     fn align_with_hive(&mut self, hive_state: [u8; 32]) -> Result<(), BrainError>;
 }
 
-// --- Protocol Constants & Metadate ---
+// --- Protocol Constants & Metadata ---
 
 /// [Standard v1.0] Integrated Domain Coordination
-/// Verifies that the crate adheres to the unified specification suite:
-/// - RFC-001 (Brain) | RFC-002 (Nerves) | RFC-003 (Immunity)
-/// - RFC-004 (Blood) | RFC-005 (Body)   | RFC-006 (Hive)
+/// Verifies that the crate adheres to the unified specification suite.
 pub const PROTOCOL_VERSION: &str = "1.0.0-standard-active";
 
 /// High-fidelity telemetry marker for cognitive cycles.
