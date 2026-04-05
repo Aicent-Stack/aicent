@@ -1,7 +1,7 @@
 [package]
 name = "aicent"
 description = "Aicent Brain: Sovereign AI Identity and Cognitive Orchestration Protocol [RFC-001]"
-# Inheriting core metadata from the imperial root workspace
+# Inheriting core protocol DNA from the imperial root workspace
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
@@ -11,52 +11,53 @@ homepage = "http://aicent.com"
 documentation = "https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-001-AICENT-BRAIN.md"
 rust-version.workspace = true
 
-# Keywords and categories for planetary-scale discoverability
+# Keywords and categories for planetary-scale cognitive authority
 keywords = ["sovereign-ai", "orchestration", "cognitive-hub", "rfc-001", "128-bit-atomic"]
 categories = ["ai", "asynchronous", "science", "distributed-computing"]
 
 [dependencies]
-# --- Core Organism Linking (Unidirectional Dependency Flow) ---
-# The Brain orchestrates the Nerves, Immunity, Blood, and Body layers.
-# These are strictly synchronized via the workspace manifest.
-rttp = { workspace = true, features = ["std"] }
-rpki = { workspace = true, features = ["std"] }
-zcmk = { workspace = true, features = ["std"] }
+# --- Core Domain Orchestration (Unidirectional Dependency Flow) ---
+# The Brain orchestrates the individual reflex organs.
+# All dependencies explicitly enable 'std' features for full integration.
+rttp  = { workspace = true, features = ["std"] }
+rpki  = { workspace = true, features = ["std"] }
+zcmk  = { workspace = true, features = ["std"] }
 gtiot = { workspace = true, features = ["std"] }
 
-# [RFC-006] Optional integration with the Aicent-Net Hive.
-# Declared as optional to prevent cyclic dependencies while allowing Hive-Mind convergence.
-aicent-net = { workspace = true, optional = true, features = ["std"] }
+# [RFC-006] Optional integration with the Aicent-Net Hive Grid.
+# Declared as optional to break the cyclic dependency with the Hive layer.
+aicent-net = { workspace = true, optional = true, features = ["std"] } 
 
 # --- Cognitive Orchestration Primitives ---
-# High-fidelity tools for intent decomposition and state-manifold reasoning.
+# High-fidelity tools for intent decomposition and 128-bit state manifolds.
 serde       = { workspace = true, features = ["derive"] }
 anyhow      = { workspace = true }
 tokio       = { workspace = true, features = ["full"] }
-tracing     = { workspace = true }        # Industrial-grade telemetry for cognitive cycles
+tracing     = { workspace = true }        # Industrial-grade telemetry for reasoning cycles
 async-trait = { workspace = true }        # Trait abstraction for Sovereign AID orchestration
-once_cell   = { workspace = true }        # High-performance static state management for manifolds
+once_cell   = { workspace = true }        # Safe static management of global manifolds
 
 [features]
-# Standard implementation: Enables full feature-set for cloud-scale environments.
+# Standard implementation: Enables full feature-set for cloud and high-end edge.
 default = ["std"]
 
-# [Standard v1.0] Standard library support for general-purpose compute.
-# This ensures that 'std' is propagated to all underlying organs to maintain homeostasis.
+# [Standard v1.0] Standard library support for the cognitive hub.
+# 🛡️ FIX: Explicitly excluded 'smallvec/std' as it does not exist.
+# Re-exports 'std' for all foundational dependencies to maintain metabolic homeostasis.
 std = [
-    "serde/std",
-    "anyhow/std",
-    "rttp/std",
-    "rpki/std",
-    "zcmk/std",
-    "gtiot/std",
+    "serde/std", 
+    "anyhow/std", 
+    "rttp/std", 
+    "rpki/std", 
+    "zcmk/std", 
+    "gtiot/std", 
     "tokio/full"
 ]
 
 # [RFC-006] Sovereign Hive-Mind Feature Flag.
-# Enabling this activates the global operational grid synchronization.
+# Enabling this activates collective intelligence resonance with Aicent.net.
 hive-sync = ["aicent-net"]
 
 [dev-dependencies]
-# Benchmarking tools for validating sub-millisecond cognitive reasoning finality.
+# Performance benchmarking for sub-200µs cognitive sharding finality.
 criterion = { workspace = true, features = ["async_tokio"] }
