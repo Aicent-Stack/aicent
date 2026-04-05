@@ -6,40 +6,40 @@ version.workspace = true
 edition.workspace = true
 authors.workspace = true
 license.workspace = true
-repository = "https://github.com/Aicent-Stack/aicent"
+repository.workspace = true
 homepage = "http://aicent.com"
 documentation = "https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-001-AICENT-BRAIN.md"
 rust-version.workspace = true
 
 # Keywords and categories for planetary-scale cognitive authority
-keywords = ["sovereign-ai", "orchestration", "cognitive-hub", "rfc-001", "128-bit-atomic", "carrier-grade"]
-categories = ["ai", "asynchronous", "science", "distributed-computing", "systems"]
+keywords = ["sovereign-ai", "orchestration", "cognitive-hub", "rfc-001", "128-bit-atomic"]
+categories = ["ai", "asynchronous", "science", "distributed-computing"]
 
 [dependencies]
-# --- The Sovereign Master Commander (Unidirectional flow) ---
-# The Brain orchestrates the L0, L1, and L2 layers.
-# These dependencies are strictly synchronized via the workspace manifest.
-rttp  = { workspace = true, features = ["std"] } # Nerves: L0 Transport
-rpki  = { workspace = true, features = ["std"] } # Immunity: L1 Security
-zcmk  = { workspace = true, features = ["std"] } # Blood: L1 Economics
-gtiot = { workspace = true, features = ["std"] } # Body: L2 Execution
+# --- Core Domain Orchestration (Unidirectional Dependency Flow) ---
+# The Brain orchestrates the individual reflex organs (L0 & L1).
+# Explicitly enable 'std' features for full protocol integration.
+rttp  = { workspace = true, features = ["std"] }
+rpki  = { workspace = true, features = ["std"] }
+zcmk  = { workspace = true, features = ["std"] }
+gtiot = { workspace = true, features = ["std"] }
 
-# --- Cognitive Orchestration Primitives (Non-Shrunken) ---
-# High-fidelity tools for intent decomposition and 128-bit state manifolds.
+# --- High-Performance Cognitive Primitives ---
+# [PERF] Utilizing 128-bit hardware atomicity for identity state manifolds.
+crossbeam   = { workspace = true } # REQUIRED for AtomicCell<u128> support
 serde       = { workspace = true, features = ["derive"] }
 anyhow      = { workspace = true }
-tokio       = { workspace = true, features = ["full"] } # Master async runtime
-tracing     = { workspace = true }        # Industrial-grade telemetry for cognitive cycles
+tokio       = { workspace = true, features = ["full"] }
+tracing     = { workspace = true }        # Industrial-grade telemetry for reasoning cycles
 async-trait = { workspace = true }        # Trait abstraction for Sovereign AID orchestration
 once_cell   = { workspace = true }        # Safe static management of global manifolds
 
 [features]
-# Standard implementation: Enables full feature-set for cloud and planetary edge.
+# Standard implementation: Enables full feature-set for cloud and high-end edge.
 default = ["std"]
 
 # [Standard v1.0] Standard library support for the cognitive hub.
-# Explicitly re-exporting 'std' for all foundational dependencies to maintain metabolic homeostasis.
-# 🛡️ THE ARCHITECTURAL LOCK: Ensures all sub-organs are synchronized to the 'std' state.
+# Explicitly re-exporting 'std' for foundational dependencies to ensure homeostasis.
 std = [
     "serde/std", 
     "anyhow/std", 
