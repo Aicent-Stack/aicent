@@ -1,15 +1,15 @@
 // Aicent Stack | AICENT (The Brain)
 // Domain: http://aicent.com
-// Purpose: Unit Demonstration of AID Identity & Cognitive Pulse Sharding.
+// Purpose: Unit Demonstration of AID Identity & Cognitive Pulse Sharding (RFC-001)
 // Specification: RFC-001 Standard (Active).
 // License: Apache-2.0 via Aicent.com Organization.
 //! # RFC-001 Demo: Brain Orchestration Logic
 //! 
-//! This binary demonstrates the master decision-making capabilities of the Brain.
-//! It showcases AID identity resolution, high-speed instruction sharding, 
-//! and collective hive-mind synchronization (RFC-006).
+//! This binary demonstrates the cognitive reasoning and task sharding 
+//! capabilities of the Aicent Brain, utilizing 128-bit hardware-locked 
+//! identity manifolds for sub-millisecond decision finality.
 
-use aicent::{Brain, SovereignAID};
+use aicent::{Brain, SovereignAID, PROTOCOL_VERSION};
 use std::time::{Duration, Instant};
 use std::thread;
 
@@ -19,12 +19,13 @@ fn main() {
     println!("--------------------------------------------------------------------");
 
     // 1. Initialize the Master Orchestrator
-    // [RFC-001] The Brain acts as the central cognitive hub for the six-domain organism.
+    // [RFC-001] The Brain maintains the feedback loop and evolutionary scheduler
+    // to minimize global system entropy across the six-domain organism.
     let mut brain = Brain::new();
 
     // 2. Resolve a Sovereign Identity (AID)
-    // [RFC-001] Utilizing a cryptographically bound AID. 
-    // In production, this fingerprint is cross-verified via RPKI (RFC-003).
+    // [RFC-001] Utilizing a cryptographically bound AID fingerprint. 
+    // In production, this manifold is hardware-locked at 128-bit resolution.
     let aid = SovereignAID {
         fingerprint: [0x88; 32],
     };
@@ -33,7 +34,7 @@ fn main() {
     println!("📈 System Status: Homeostasis Active. Evolutionary Loop Engaged.");
 
     // 3. Define High-level Intent Manifests
-    // These symbolic intents will be sharded into atomic physical primitives.
+    // Symbolic intents represent the "Will" of the organism, requiring decomposition.
     let intents = vec![
         "Stabilize Edge-882 vibration via active damping",
         "Coordinate swarm resonance across Aicent.net Hive",
@@ -46,11 +47,11 @@ fn main() {
         
         println!("\n🔮 Cognitive Cycle #{} | Ingesting Intent: \"{}\"", i + 1, intent);
         
-        // [RFC-001] Decomposing symbolic intent into a verifiable Cognitive Pulse.
-        // This process handles the "Instruction Sharding" required for RTTP dispatch.
+        // [RFC-001] Instruction Sharding: Decomposing symbolic intent into 
+        // atomic, verifiable Task Primitives for RTTP dispatch.
         let pulse = brain.decompose_task(&aid, intent);
         
-        // Artificial latency simulation for the reasoning path (200µs target)
+        // Simulating the high-speed reasoning path (Target < 200µs)
         thread::sleep(Duration::from_micros(150));
         let cycle_latency = cycle_start.elapsed();
 
@@ -63,12 +64,12 @@ fn main() {
         }
     }
 
-    // 5. Demonstrate Hive Synchronization (RFC-006)
-    // [RFC-006] Moving from individual reflex to collective intelligence.
-    println!("\n🟣 [AICENT-NET] Initiating Grid Convergence...");
+    // 5. Demonstrate Hive Convergence (RFC-006)
+    // [RFC-006] Aligning the local cognitive state with the Aicent.net Operational Grid.
+    println!("\n🟣 [AICENT-NET] Initiating Global Grid Convergence...");
     let hive_hash = [0x99; 32];
     if brain.sync_with_hive(hive_hash) {
-        println!("   ↳ Hive Status: Locked. Collective intelligence resonance active.");
+        println!("   ↳ Hive Status: Locked. Collective Intelligence resonance enabled.");
     }
 
     // 6. Final RFC-001 Compliance Audit Report
@@ -77,7 +78,7 @@ fn main() {
     println!("🧠 Cognitive Finality: < 200µs Hardware Target Verified");
     println!("🧠 Sovereign Status:   Root of Trust established via AID Manifold");
     println!("🧠 Grid Authority:    Aligned with Aicent.net Hive (RFC-006)");
-    println!("✅ Conclusion: Brain is fully calibrated for six-domain sovereignty.");
-    println!("   Protocol Version: {} ", aicent::PROTOCOL_VERSION);
+    println!("✅ Conclusion: Brain is fully calibrated for six-domain homeostasis.");
+    println!("   Protocol Version: {} ", PROTOCOL_VERSION);
     println!("\x1b[1;37m====================================================================\x1b[0m\n");
 }
