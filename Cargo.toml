@@ -1,62 +1,59 @@
 [package]
 name = "aicent"
-version = "0.1.0-alpha"
-edition = "2024"
-authors = ["Aicent Stack Team <alliances@aicent.com>"]
-description = "The Cognitive Orchestration Layer of the Aicent Stack: Sovereign Identity and Intent Sharding."
-license = "Apache-2.0"
-repository = "https://github.com/Aicent-Stack/aicent"
+description = "Aicent Brain: Sovereign AI Identity and Cognitive Orchestration Protocol [RFC-001]"
+# Inheriting core protocol DNA from the imperial root workspace
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
 homepage = "http://aicent.com"
-documentation = "https://github.com/Aicent-Stack/aicent/blob/main/README.md"
-readme = "README.md"
-rust-version = "1.85.0"
+documentation = "https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-001-AICENT-BRAIN.md"
+rust-version.workspace = true
 
-# -----------------------------------------------------------------------------
-# SEARCH & DISCOVERY: Standardized for crates.io Indexing
-# -----------------------------------------------------------------------------
-keywords = [
-    "sovereign-ai",
-    "orchestration",
-    "cognitive-hub",
-    "rfc-001",
-    "intelligence"
-]
+# Keywords and categories for planetary-scale cognitive authority
+keywords = ["sovereign-ai", "orchestration", "cognitive-hub", "rfc-001", "128-bit-atomic"]
+categories = ["ai", "asynchronous", "science", "distributed-computing"]
 
-# Using only officially supported slugs from crates.io/category_slugs
-categories = [
-    "asynchronous",
-    "network-programming",
-    "science",
-    "cryptography",
-    "concurrency"
-]
-
-# -----------------------------------------------------------------------------
-# THE NEURAL CORE: Mandatory Dependencies for Alpha Verification
-# -----------------------------------------------------------------------------
 [dependencies]
-crossbeam = "0.8"
-serde = { version = "1.0", features = ["derive"] }
-serde_json = "1.0"
-tokio = { version = "1.37", features = ["full"] }
-anyhow = "1.0"
-tracing = "0.1"
-async-trait = "0.1"
-once_cell = "1.19"
+# --- Core Domain Orchestration (Unidirectional Dependency Flow) ---
+# The Brain orchestrates the individual reflex organs (L0 & L1).
+# Explicitly enable 'std' features for full protocol integration.
+rttp  = { workspace = true, features = ["std"] }
+rpki  = { workspace = true, features = ["std"] }
+zcmk  = { workspace = true, features = ["std"] }
+gtiot = { workspace = true, features = ["std"] }
 
-# -----------------------------------------------------------------------------
-# PROJECT STRUCTURE
-# -----------------------------------------------------------------------------
-[lib]
-name = "aicent"
-path = "src/lib.rs"
+# --- High-Performance Cognitive Primitives ---
+# [PERF] Utilizing 128-bit hardware atomicity for identity state manifolds.
+crossbeam   = { workspace = true } # REQUIRED for AtomicCell<u128> support
+serde       = { workspace = true, features = ["derive"] }
+anyhow      = { workspace = true }
+tokio       = { workspace = true, features = ["full"] }
+tracing     = { workspace = true }        # Industrial-grade telemetry for reasoning cycles
+async-trait = { workspace = true }        # Trait abstraction for Sovereign AID orchestration
+once_cell   = { workspace = true }        # Safe static management of global manifolds
 
-# -----------------------------------------------------------------------------
-# RELEASE PROFILE
-# -----------------------------------------------------------------------------
-[profile.release]
-opt-level = 3
-lto = true
-codegen-units = 1
-panic = "abort"
-strip = "symbols"
+[features]
+# Standard implementation: Enables full feature-set for cloud and high-end edge.
+default = ["std"]
+
+# [Standard v1.0] Standard library support for the cognitive hub.
+# Explicitly re-exporting 'std' for foundational dependencies to ensure homeostasis.
+std = [
+    "serde/std", 
+    "anyhow/std", 
+    "rttp/std", 
+    "rpki/std", 
+    "zcmk/std", 
+    "gtiot/std", 
+    "tokio/full"
+]
+
+# [RFC-006] Hive-Mind Readiness Flag.
+# Prepared for future Hive convergence without introducing cyclic loops.
+hive-ready = []
+
+[dev-dependencies]
+# Performance benchmarking for sub-200µs cognitive sharding finality.
+criterion = { workspace = true, features = ["async_tokio"] }
