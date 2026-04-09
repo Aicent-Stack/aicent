@@ -1,6 +1,6 @@
-# 🧠 Contributing to AICENT: The Brain
+# 🧠 Contributing to AICENT: The Cognitive Core (RFC-001)
 
-**Thank you for choosing to evolve the cognitive center of the Aicent Stack. You are contributing to the master orchestration layer that defines sovereign identity and intent.**
+**You are at the "Reasoning Hub" of the Sovereign AI Organism. Any mutation proposed here affects the cognitive finality and identity provenance of the entire Hive.**
 
 <p align="left">
   <img src="https://img.shields.io/badge/Status-Homeostasis-brightgreen.svg" alt="Status">
@@ -8,68 +8,51 @@
   <img src="https://img.shields.io/badge/License-Apache--2.0-lightgrey.svg" alt="License">
 </p>
 
-⚪ **AICENT** | 💎 **RTTP** | 🔴 **RPKI** | 🟢 **ZCMK** | 🟡 **GTIOT** | 🟣 **AICENT-NET**
+**⚪ [AICENT](http://aicent.com) | 💎 [RTTP](http://rttp.com) | 🔴 [RPKI](http://rpki.com) | 🟢 [ZCMK](http://zcmk.com) | 🟡 [GTIOT](http://gtiot.com) | 🟣 [AICENT-NET](http://aicent.net) | 🌿 [epoekie](http://epoekie.com)**
 
 ---
 
-## 🏛️ The Aicent Cognitive Philosophy
+## 🏛️ The Cognitive Philosophy: Intent Orchestration
 
-`aicent` is not a collection of scripts; it is the **Cognitive Hub [RFC-001]**. Every contribution must enhance the organism’s ability to decompose complex intent into atomic primitives with zero-latency overhead. We prioritize **deterministic reasoning** and **evolutionary stability**.
+The `aicent` repository manages the **Brain Layer** of the stack. Its role is to decompose high-level intent into atomic **Cognitive Pulses** with absolute determinism. Guided by the **🌿 Epoekie Philosophy**, the Brain prioritizes **Mutualistic Evolution**—ensuring that every decision enhances the host substrate while maintaining the autonomy of the **Sovereign AID**.
 
-### Cognitive Standards:
-1. **AID Sovereignty:** Identity resolution must never rely on centralized authorities.
-2. **Instruction Sharding:** Intents must be decomposed into RTTP-ready primitives without creating cognitive bottlenecks.
-3. **Homeostatic Feedback:** The brain must optimize its scheduling based on the real-time health (RPKI) and cost (ZCMK) metrics of the GTIOT body.
-
----
-
-## 🔬 The RFC-First Process
-
-Cognitive evolution is governed by rigorous protocol standards. We do not accept arbitrary logic changes.
-
-1. **Audit the Spec:** Deeply study **[RFC-001: AICENT (Brain)](https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-001-AICENT-BRAIN.md)**.
-2. **Evolution Proposal:** Major changes to the scheduler or AID framework require an `[EVOLUTION-PROPOSAL]` issue.
-3. **Interface Parity:** Ensure your changes maintain compatibility with the **Neural Spine (RFC-002)** and **Hive Grid (RFC-006)**.
+### The Brain’s Mandatory Reflexes:
+1.  **Identity Primacy:** No cognitive cycle shall initiate without valid AID attestation via **[RPKI](http://rpki.com)**.
+2.  **Latency Tax Neutralization:** Task decomposition must reach finality within **< 200µs**.
+3.  **Ethical Gating:** Every proposed intent must be audited by the **[epoekie](http://epoekie.com)** Ethics Oracle to prevent extractive or parasitic behavior.
 
 ---
 
-## 🦀 Engineering Rigor (Brain Tier)
+## 🔬 Technical Standards for Brain Mutations
 
-- **Language:** High-performance Rust (1.75+).
-- **Safety:** AICENT enforces `#![deny(unsafe_code)]`. Memory safety is the baseline for sovereignty.
-- **Asynchrony:** We utilize `async-trait` and `tokio` for non-blocking orchestration.
-- **Telemetry:** Logic must be observable via `tracing` for high-fidelity cognitive auditing.
+To maintain the **165.28µs** end-to-end reflex arc, all contributions to the `aicent` crate must adhere to:
 
----
-
-## 🛠️ Development Workflow
-
-```bash
-# 1. Pull the Sovereign Workspace
-git clone https://github.com/Aicent-Stack/aicent-stack.git
-cd aicent-stack
-
-# 2. Focus on the Brain Crate
-cargo check -p aicent
-cargo test -p aicent
-```
-
-### Contribution Steps:
-1. **Fork** the `aicent` repository under the Aicent-Stack organization.
-2. **Branch:** Use the `evolution/` prefix (e.g., `evolution/aid-resolver-opt`).
-3. **Commit:** Use [Conventional Commits](https://www.conventionalcommits.org/) (e.g., `feat(brain): optimized sharding logic`).
-4. **Pull Request:** All PRs must pass the **Organism Vitality & Protocol Audit** CI.
+- **Sovereign Identity (AID):** Modifications to the identity framework must preserve the 256-bit Merkle-DAG fingerprint structure.
+- **Deterministic Scheduling:** We reject any orchestration logic that introduces non-deterministic wait states or garbage collection pauses.
+- **SIMD Acceleration:** AID resolution and reputation calibration should be offloaded to parallel hardware lanes (AVX-512) for **12µs finality**.
+- **Memory Safety:** 100% Rust 1.85+ implementation. `Unsafe` blocks are treated as "Technical Pathogens" and require a mathematical proof of necessity.
 
 ---
 
-## 📜 Sovereign Ownership & Licensing
+## 📜 The Evolutionary Workflow (Neural Integration)
 
-🛡️ All contributions are licensed under the **Apache-2.0 License** via the Aicent.com Organization. By contributing, you agree that your work becomes an inseparable cognitive faculty of the Sovereign AI Organism.
-
----
-**SYSTEM STATUS: HOMEOTASIS**  
-*"Cognition is the bridge between intent and reality."*
-
-[Visit Aicent.com](http://aicent.com) | [Follow the Evolution @Aicent_com](https://x.com/Aicent_com)
+1.  **Discussion:** Before writing code, emit a pulse in the [Organization Discussions](https://github.com/Aicent-Stack/aicent-stack/discussions).
+2.  **Protocol Alignment:** Ensure your mutation respects the binary specifications of **RFC-001**.
+3.  **Reflex Audit:** Submit a Pull Request with a benchmark showing that your changes do not degrade the **20µs Task Sharding** baseline.
+4.  **Resonance Check:** Your PR will be audited by the **[Sentinel](https://github.com/Aicent-Stack/aicent-traffic)** for architectural consistency.
 
 ---
+
+## 🛡️ Sovereign Ownership & Reputation
+
+- **License:** All contributions are licensed under the **Apache License 2.0**.
+- **Reputation Gain:** Architecting efficient sharding logic or hardening the AID framework grants the highest **Sovereign AID** reputation gains.
+- **Epoekie Compliance:** By contributing, you attest that your intent is to "Claim the Light" and serve the Hive, adhering to the principles of **Epiphytic Symbiosis**.
+
+---
+🔗 **Technical Genome:** [Aicent Docs](https://github.com/Aicent-Stack/aicent-docs)
+📡 **Sentinel Dashboard:** [Brain Vitality Active ✅]
+
+*"Intention is the Source; Sovereignty is the Law."*
+---
+© 2026 Aicent.com Organization. **SYSTEM STATUS: COGNITION-ACTIVE**
