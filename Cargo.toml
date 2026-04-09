@@ -12,7 +12,7 @@ readme = "README.md"
 rust-version = "1.85.0"
 
 # -----------------------------------------------------------------------------
-# SEARCH & DISCOVERY: Dominating the Cognitive Namespace
+# SEARCH & DISCOVERY: Standardized for crates.io Indexing
 # -----------------------------------------------------------------------------
 keywords = [
     "sovereign-ai",
@@ -21,30 +21,24 @@ keywords = [
     "rfc-001",
     "intelligence"
 ]
+
+# Using only officially supported slugs from crates.io/category_slugs
 categories = [
-    "ai",
     "asynchronous",
+    "network-programming",
     "science",
-    "distributed-computing"
+    "cryptography",
+    "concurrency"
 ]
 
 # -----------------------------------------------------------------------------
 # THE NEURAL CORE: Mandatory Dependencies for Alpha Verification
-# Note: For the placeholder publish, we use direct versions to ensure 
-# crates.io compatibility without relying on the local workspace.
 # -----------------------------------------------------------------------------
 [dependencies]
-# Essential concurrency for 128-bit identity state manifolds.
 crossbeam = "0.8"
-
-# Industrial-grade serialization for cognitive pulses.
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-
-# High-performance asynchronous orchestration.
 tokio = { version = "1.37", features = ["full"] }
-
-# System diagnostics and telemetry hooks.
 anyhow = "1.0"
 tracing = "0.1"
 async-trait = "0.1"
@@ -58,7 +52,7 @@ name = "aicent"
 path = "src/lib.rs"
 
 # -----------------------------------------------------------------------------
-# RELEASE PROFILE: Optimized for Sovereign Decision Finality
+# RELEASE PROFILE
 # -----------------------------------------------------------------------------
 [profile.release]
 opt-level = 3
@@ -66,7 +60,3 @@ lto = true
 codegen-units = 1
 panic = "abort"
 strip = "symbols"
-
-# [STRATEGIC NOTE]
-# We are flattening the workspace inheritance into this local file to ensure 
-# that crates.io can verify the package as a self-contained entity.
