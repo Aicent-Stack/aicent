@@ -1,6 +1,6 @@
 # 🧠 Contributing to AICENT: The Cognitive Core (RFC-001)
 
-**You are at the "Reasoning Hub" of the Sovereign AI Organism. Any mutation proposed here affects the cognitive finality and identity provenance of the entire Hive.**
+**Thank you for choosing to evolve the cognitive center of the Aicent Stack.You are at the "Reasoning Hub" of the Sovereign AI Organism. Any mutation proposed here affects the cognitive finality and identity provenance of the entire Hive.**
 
 <p align="left">
   <img src="https://img.shields.io/badge/Status-Homeostasis-brightgreen.svg" alt="Status">
