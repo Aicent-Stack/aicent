@@ -67,4 +67,5 @@ cargo run --bin aicent-organism
 *"Intention is the Source; Sovereignty is the Law."*
 ---
 © 2026 Aicent.com Organization. **SYSTEM STATUS: COGNITION-ACTIVE**
-```
+
+Aicent Stack and the epoekie organization are independent entities. The premium namespaces utilized (Aicent.com, Aicent.net,RPKI.com,RTTP.com, etc.) are held as sovereign assets for the development of next-generation AI infrastructure, unrelated to the prior business operations of the domains' former owners.
