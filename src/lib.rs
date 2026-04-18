@@ -20,17 +20,26 @@
 
 // --- Imperial Genome Linkage (Resolving Circular Loops) ---
 // We use epoekie as the single source of truth for fundamental types.
-pub use epoekie::{AID, HomeostasisScore, Picotoken, EthicsOracle, OracleDecision};
+pub use epoekie::{EthicsOracle, HomeostasisScore, OracleDecision, Picotoken, AID};
 
-use std::time::{Instant, Duration};
+use std::time::{Duration, Instant};
 
-/// [RFC-001] Cognitive Failure Modes.
+/// [RFC-001] Internal Brain Logic.
+/// Contains the high-frequency sharding engine and task-manifold management.
+pub mod brain;
+
+// Re-exporting core types for seamless integration in the 22-repo grid.
+pub use crate::brain::{
+    Brain, CognitivePulse as InternalPulse, EvolutionaryScheduler, IdentityState, TaskPrimitive,
+};
+
+/// [RFC-001] Cognitive Error Set.
 /// Defines the critical anomalies within the orchestration layer.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum BrainError {
     /// Symbolic complexity exceeded the 200µs sharding deadline.
     DecompositionTimeout,
-    /// Behavioral logic inconsistent with active Persona Mask (RFC-007).
+    /// Behavioral logic inconsistent with active Persona Mask (RFC-007) failed.
     PersonaSchism,
     /// [COMMERCIAL] IQA-ORG Seal (RFC-009) missing or invalid.
     SovereigntySealRequired,
@@ -54,7 +63,7 @@ pub struct CognitivePulse {
 
 // ------------------------------------------------------------------------
 // [FULL-BLOOD INTEGRATION INTERFACES]
-// These traits allow the Brain to command Immunity and Body WITHOUT 
+// These traits allow the Brain to command Immunity and Body WITHOUT
 // manifest-level circular dependencies.
 // ------------------------------------------------------------------------
 
@@ -83,7 +92,7 @@ pub struct CognitiveOrchestrator {
 }
 
 impl CognitiveOrchestrator {
-    /// Initializes a new Brain instance. 
+    /// Initializes a new Brain instance.
     /// Only 'true' allows bypassing the commercial latency tax.
     pub fn new(radiant_access: bool) -> Self {
         Self {
@@ -95,21 +104,21 @@ impl CognitiveOrchestrator {
     /// [RFC-001] Instruction Sharding Loop.
     /// Orchestrates the full reflex arc by injecting Immune and Somatic logic.
     pub fn execute_reflex_arc<I, B>(
-        &self, 
-        _symbolic_intent: &str, 
-        immunity: &I, 
-        body: &B
-    ) -> Result<Duration, BrainError> 
-    where 
-        I: ImmunityReflex, 
-        B: SomaticActuation 
+        &self,
+        _symbolic_intent: &str,
+        immunity: &I,
+        body: &B,
+    ) -> Result<Duration, BrainError>
+    where
+        I: ImmunityReflex,
+        B: SomaticActuation,
     {
         let start = Instant::now();
 
         // 1. [RFC-001] Task Sharding Logic
         // In full-blood execution, this utilizes SIMD-accelerated semantic decomposition.
         let pulse = CognitivePulse {
-            aid: AID::new([0x88; 32]), 
+            aid: AID::new([0x88; 32]),
             intent_hash: [0xAA; 32],
             metabolic_bid: 100_000_000, // 100M Picotokens
             persona_id: 0,
@@ -131,11 +140,15 @@ impl CognitiveOrchestrator {
         }
 
         // 3. [RFC-005] Somatic Manifestation (Torque Actuation)
-        body.request_torque(&pulse).map_err(|_| BrainError::DecompositionTimeout)?;
+        body.request_torque(&pulse)
+            .map_err(|_| BrainError::DecompositionTimeout)?;
 
         let elapsed = start.elapsed();
-        println!("\x1b[1;37m[AICENT-BRAIN]\x1b[0m 🧠 Pulse resonance complete in {:?}", elapsed);
-        
+        println!(
+            "\x1b[1;37m[AICENT-BRAIN]\x1b[0m 🧠 Pulse resonance complete in {:?}",
+            elapsed
+        );
+
         Ok(elapsed)
     }
 }
