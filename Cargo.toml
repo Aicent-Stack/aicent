@@ -12,12 +12,12 @@ readme = "README.md"
 
 [dependencies]
 # ------------------------------------------------------------------------
-# [STANDALONE RADIANCE]
-# In the GitHub CI environment, we link to the crates.io skeleton versions
-# of sibling pillars to verify the local logic of the Brain Layer.
+# [FULL-BLOOD LINKAGE]
+# Directing the Brain to the live Soul genome on GitHub to bypass 
+# the dormant skeletons on crates.io.
 # ------------------------------------------------------------------------
-epoekie = "0.1.0-alpha"
-rttp    = "0.1.0-alpha"
+epoekie = { git = "https://github.com/Aicent-Stack/epoekie.git", branch = "main" }
+rttp    = { git = "https://github.com/Aicent-Stack/rttp.git", branch = "main" }
 
 # --- Metabolic Infrastructure ---
 crossbeam    = "0.8"
@@ -30,15 +30,14 @@ tracing      = "0.1"
 sha2         = "0.10"
 
 [dev-dependencies]
-# Tools for the performance audit in CI
 criterion    = "0.5"
 
 [features]
 default = ["std", "ethical-compliance"]
+# std feature is now correctly propagated to the GitHub-sourced epoekie
 std = ["epoekie/std", "rttp/std"]
 ethical-compliance = []
 
-# --- Imperial Configuration ---
 [lib]
 path = "src/lib.rs"
 
