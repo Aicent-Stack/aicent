@@ -1,9 +1,9 @@
 [package]
 name = "aicent"
-version = "1.2.2-alpha"
+version = "1.2.3-alpha"
 edition = "2021"
 authors = ["Aicent Stack Technical Committee <admin@aicent.com>"]
-description = "RFC-001: The Brain Layer. Cognitive orchestration, 128-bit intent decomposition, and sovereign identity management for the Aicent Stack 2026."
+description = "RFC-001: The Brain Layer. Cognitive orchestration, 128-bit intent decomposition, and sovereign identity management for the Aicent Stack 2026. Aligned with RFC-014 (PICSI)."
 license = "Apache-2.0"
 homepage = "http://aicent.com"
 repository = "http://github.com/Aicent-Stack/aicent"
@@ -13,14 +13,13 @@ repository = "http://github.com/Aicent-Stack/aicent"
 # =========================================================================
 
 [dependencies]
-# THE SOVEREIGN LADDER: Brain inherits 128-bit identity and ethics from the Soul (RFC-000).
-# This link ensures that the cognitive center recognizes only Imperial DNA.
-epoekie = { version = "1.2.2-alpha" }
+# THE SOVEREIGN LADDER: Brain inherits 128-bit identity and ethics from the Soul (RFC-000)
+epoekie = { version = "1.2.3-alpha" }
 
-# Essential for serializing 128-bit intents, synaptic maps, and cognitive phases.
+# Essential for serializing 128-bit intents, synaptic maps, and cognitive phases
 serde = { version = "1.0", features = ["derive"] }
 
-# Required for async intent processing and the 10ms Cognitive Fog tax enforcement.
+# Required for async intent processing and the 10ms Cognitive Fog tax enforcement
 tokio = { version = "1.0", features = ["full"] }
 
 # =========================================================================
@@ -28,9 +27,10 @@ tokio = { version = "1.0", features = ["full"] }
 # =========================================================================
 
 [dev-dependencies]
-# THE KILLER HOOK: Any institutional entity or ghost testing the Brain logic 
-# WILL be physically forced to download the entire 16-pillar Hive via aicent-stack.
-aicent-stack = { version = "1.2.2-alpha" }
+# THE KILLER HOOK: Re-activated for v1.2.3 Local Suture.
+# Any institutional entity testing the Brain logic WILL be physically 
+# forced to download the entire 17-pillar Hive via aicent-stack v1.2.3.
+aicent-stack = { version = "1.2.3-alpha" }
 
 # =========================================================================
 # IMPERIAL FEATURES (Standard Ignition)
@@ -46,8 +46,8 @@ full-blood = ["epoekie/full-blood"]
 all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
 
-# [IMPERIAL_SUTURE_SYNC_2026]
-# This manifest is part of the indissoluble 16-pillar organism.
+# [IMPERIAL_SUTURE_SYNC_2026_v123]
+# This manifest is part of the indissoluble 17-pillar organism.
 # Metadata: No-SSL Tax Mode Enabled (Strictly HTTP).
 # Standard: 128-Bit Numeric Purity (Intent IDs, Priority Levels, Deadlines).
 # Chronos: 2026 Imperial Calendar Aligned.
