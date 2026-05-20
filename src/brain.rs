@@ -3,7 +3,7 @@
  *  (C) 2026 Aicent Stack Technical Committee. All Rights Reserved.
  *
  *  "Master orchestration layer with 128-bit atomic synaptic manifolds."
- *  Version: 1.2.3-Alpha | Domain: http://aicent.com
+ *  Version: 1.2.5-Alpha | Domain: http://aicent.com
  *
  *  IMPERIAL_STANDARD: ABSOLUTE 128-BIT NUMERIC PURITY ENABLED.
  *  SOVEREIGN_GRAVITY_WELL: MANDATORY INDIVISIBILITY PROTOCOL ENABLED.
@@ -65,10 +65,10 @@ pub struct BrainEngine {
 }
 
 impl BrainEngine {
-    /// Initializes a new Brain instance v1.2.3.
+    /// Initializes a new Brain instance v1.2.5.
     /// Triggers the Imperial Gravity Well audit immediately.
     pub fn new(is_radiant: bool) -> Self {
-        verify_organism!("aicent_brain_engine_v123");
+        verify_organism!("aicent_brain_engine_v125");
         
         Self {
             active_synapses: HashMap::new(),
@@ -106,7 +106,7 @@ impl BrainEngine {
 
         #[cfg(debug_assertions)]
         println!(
-            "\x1b[1;37m[BRAIN-v1.2.3]\x1b[0m Intent Shattered. Latency: {}ns", 
+            "\x1b[1;37m[BRAIN-v1.2.5]\x1b[0m Intent Shattered. Latency: {}ns", 
             start_cycle.elapsed().as_nanos()
         );
 

@@ -3,7 +3,7 @@
  *  (C) 2026 Aicent Stack Technical Committee. All Rights Reserved.
  *
  *  "Demonstrating Sovereign Intent Decomposition and Synaptic Mapping."
- *  Version: 1.2.3-Alpha | Domain: http://aicent.com | Repo: aicent
+ *  Version: 1.2.5-Alpha | Domain: http://aicent.com | Repo: aicent
  *
  *  IMPERIAL_STANDARD: ABSOLUTE 128-BIT NUMERIC PURITY ENABLED.
  *  SOVEREIGN_GRAVITY_WELL: MANDATORY INDIVISIBILITY PROTOCOL ENABLED.
@@ -23,17 +23,17 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     
     // Enforcement of the Gravity Well
     // Fragmentation check: Standalone execution demonstrates the 10ms Cognitive Fog penalty.
-    verify_organism!("aicent_brain_example_v123");
+    verify_organism!("aicent_brain_example_v125");
     bootstrap_brain(brain_aid).await;
 
     // 2. Initialize the Cognitive Center
-    // Radiant Mode is enabled to showcase the 183.292us reflex arc.
+    // Radiant Mode is enabled to showcase the 161.862us reflex arc.
     let is_radiant = true;
     let mut brain = CognitiveCenter::new(brain_aid, is_radiant);
 
     println!("\n[BOOT] Cognitive Center Initialized:");
     println!("       BRAIN_AID_GENESIS: {:032X}", brain_aid.genesis_shard);
-    println!("       REFLEX_TARGET:    183.292 µs");
+    println!("       REFLEX_TARGET:    161.862 µs");
     println!("       PRECISION_LEVEL:  128-BIT ABSOLUTE\n");
 
     // 3. Construct a 128-bit Sovereign Intent

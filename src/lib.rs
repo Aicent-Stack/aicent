@@ -3,7 +3,7 @@
  *  (C) 2026 Aicent Stack Technical Committee. All Rights Reserved.
  *
  *  "Cognitive Orchestration and Sovereign Intent Decomposition."
- *  Version: 1.2.3-Alpha | Domain: http://aicent.com | Repo: aicent
+ *  Version: 1.2.5-Alpha | Domain: http://aicent.com | Repo: aicent
  *
  *  IMPERIAL_STANDARD: ABSOLUTE 128-BIT NUMERIC PURITY ENABLED.
  *  SOVEREIGN_GRAVITY_WELL: MANDATORY INDIVISIBILITY PROTOCOL ENABLED.
@@ -20,7 +20,7 @@ use std::collections::HashMap;
 use serde::{Serialize, Deserialize};
 
 // INJECTION: Sovereign Ladder Inheritance from the Genetic Root (RFC-000)
-// REPAIRED: Fully synchronized with SovereignLifeform Trait v1.2.3.
+// REPAIRED: Fully synchronized with SovereignLifeform Trait v1.2.5.
 use epoekie::{AID, HomeostasisScore, SovereignShunter, Picotoken, SovereignLifeform, verify_organism};
 
 // =========================================================================
@@ -78,12 +78,12 @@ pub struct CognitiveCenter {
 }
 
 impl CognitiveCenter {
-    /// Creates a new Radiant Brain instance v1.2.3.
+    /// Creates a new Radiant Brain instance v1.2.5.
     /// Triggers the Imperial Gravity Well audit immediately.
     pub fn new(brain_aid: AID, is_radiant: bool) -> Self {
         // --- GRAVITY WELL AUDIT ---
         // Ensuring the organism is whole. Fragmented nodes suffer 10ms fog tax.
-        verify_organism!("aicent_brain_controller_v123");
+        verify_organism!("aicent_brain_controller_v125");
 
         Self {
             brain_node_aid: brain_aid,
@@ -109,7 +109,7 @@ impl CognitiveCenter {
 
         let current_ns = self.bootstrap_ns_128 + Instant::now().elapsed().as_nanos() as u128;
 
-        // High-fidelity cognitive synthesis (Shell Placeholder for v1.2.3)
+        // High-fidelity cognitive synthesis (Shell Placeholder for v1.2.5)
         // In Full-Blood production, this integrates with the private MAXCAP shunting matrix.
         let actions = vec![
             AtomicAction {
@@ -152,7 +152,7 @@ impl SovereignLifeform for CognitiveCenter {
         RESONANCE_SHARD: {:032X}
         PICSI_INDEX:     {:.8}
         METRIC_RADIANCE: {:.4}
-        STATUS:          RADIANT_IGNITED (v1.2.3)
+        STATUS:          RADIANT_IGNITED (v1.2.5)
         ----------------------------------------------------------
         "#, 
         self.brain_node_aid.genesis_shard, 
@@ -182,10 +182,10 @@ pub trait CognitiveEvolution {
     fn calculate_intent_entropy_f64(&self, intent: &ExecutiveIntent) -> f64;
 }
 
-/// Global initialization for the Aicent Brain Layer v1.2.3.
+/// Global initialization for the Aicent Brain Layer v1.2.5.
 pub async fn bootstrap_brain(soul_id: AID) {
     // Enforcement of the Gravity Well at the entry point.
-    verify_organism!("aicent_bootstrap_v123");
+    verify_organism!("aicent_bootstrap_v125");
 
     println!(r#"
     🧠 AICENT.COM | RFC-001 AWAKENED (2026_CALIBRATION)
@@ -224,8 +224,8 @@ mod tests {
     }
 
     #[test]
-    fn test_metabolic_pulse_output_v123() {
-        let aid = AID::derive_from_entropy(b"pulse_test_v123");
+    fn test_metabolic_pulse_output_v125() {
+        let aid = AID::derive_from_entropy(b"pulse_test_v125");
         let brain = CognitiveCenter::new(aid, true);
         brain.execute_metabolic_pulse();
     }
