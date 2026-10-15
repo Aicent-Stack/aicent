@@ -10,7 +10,7 @@
 **⚪ [AICENT](http://aicent.com) | 💎 [RTTP](http://rttp.com) | 🔴 [RPKI](http://rpki.com) | 🟢 [ZCMK](http://zcmk.com) | 🟡 [GTIOT](http://gtiot.com) | 🟣 [AICENT-NET](http://aicent.net) | 🎭 [BEWHO](http://bewho.com) | 🌿 [epoekie](http://epoekie.com) | 👁️ [PICSI](http://picsi.com)**
 
 ---
-# 🧠 RFC-001: AICENT (The Imperial Brain)
+# 🧠 AICENT-001: AICENT (The Imperial Brain)
 
 **The Cognitive Command Center of the Aicent Stack.**  
 **"Thought is the Blueprint of Power. Intent is the 128-bit Genome of Change."**
@@ -30,19 +30,19 @@ The human-scale latency of V1.2.5 (161.8µs) has been collapsed into the **349ns
 
 `aicent` orchestrates the transformation of Will into mechanical and economic reality through three sharded sub-systems:
 
-### 1. Intent Factory (RFC-001-A)
+### 1. Intent Factory (AICENT-001-A)
 The furnace of pure logic. It shatters complex sovereign intents into pillar-specific **AtomicAction128** shards.
 *   **Cognitive Sharding**: Distributes intent across the 17 pillars with zero overlap.
 *   **Metabolic Pricing**: Dynamically calculates the Picotoken cost of an action based on substrate energy draw (ITSUN) and risk (RPKI).
 *   **Precision**: Every intent is timestamped to the **12ns rising edge**.
 
-### 2. Synaptic Cortex (RFC-001-B)
+### 2. Synaptic Cortex (AICENT-001-B)
 The clinical 128-bit memory manifold. It tracks the standing, fidelity, and history of every node in the grid.
 *   **Synaptic Hardening**: Optimizes frequently used pathways for **28.0us Nitro-bypass**.
 *   **Reputation Auditing**: Continuously evaluates node Radiance; drifting nodes (Ghosts) are automatically quarantined.
 *   **Nitro-Packing**: Compresses reputation and era-data into a single 128-bit register word for sub-nanosecond retrieval.
 
-### 3. Evolutionary Scheduler (RFC-001-C)
+### 3. Evolutionary Scheduler (AICENT-001-C)
 The master rhythmic balancer. It manages the 1.2kHz heartbeat and prevents "Cognitive Congestion."
 *   **Priority Shunting**: Ensures Somatic (GTIOT) and Nerve (RTTP) intents bypass all administrative noise.
 *   **Metabolic Load Balancing**: Distributes computational work to prevent thermal pathogens (Substrate overheats).

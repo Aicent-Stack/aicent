@@ -3,7 +3,7 @@ name = "aicent"
 version = "1.2.5-alpha"
 edition = "2021"
 authors = ["Aicent Stack Technical Committee <admin@aicent.com>"]
-description = "RFC-001: The Brain Layer. Cognitive orchestration, 128-bit intent decomposition, and sovereign identity management for the Aicent Stack 2026. Aligned with RFC-014 (PICSI)."
+description = "AICENT-001: The Brain Layer. Cognitive orchestration, 128-bit intent decomposition, and sovereign identity management for the Aicent Stack 2026. Aligned with AICENT-014 (PICSI)."
 license = "Apache-2.0"
 homepage = "http://aicent.com"
 repository = "http://github.com/Aicent-Stack/aicent"
@@ -13,7 +13,7 @@ repository = "http://github.com/Aicent-Stack/aicent"
 # =========================================================================
 
 [dependencies]
-# THE SOVEREIGN LADDER: Brain inherits 128-bit identity and ethics from the Soul (RFC-000)
+# THE SOVEREIGN LADDER: Brain inherits 128-bit identity and ethics from the Soul (AICENT-000)
 epoekie = { version = "1.2.5-alpha" }
 
 # Essential for serializing 128-bit intents, synaptic maps, and cognitive phases

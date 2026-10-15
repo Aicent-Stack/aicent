@@ -1,5 +1,5 @@
 /*
- *  AICENT STACK - RFC-001: AICENT (The Brain Layer)
+ *  AICENT STACK - AICENT-001: AICENT (The Brain Layer)
  *  (C) 2026 Aicent Stack Technical Committee. All Rights Reserved.
  *
  *  "Cognitive Orchestration and Sovereign Intent Decomposition."
@@ -8,8 +8,8 @@
  *  IMPERIAL_STANDARD: ABSOLUTE 128-BIT NUMERIC PURITY ENABLED.
  *  SOVEREIGN_GRAVITY_WELL: MANDATORY INDIVISIBILITY PROTOCOL ENABLED.
  *  CHRONOS_STATUS: 2026 IMPERIAL CALENDAR ALIGNED.
- *  TEMPORAL_SELF_SUPERVISION: RFC-009 ACTIVE.
- *  DIAGNOSTIC_RESONANCE: RFC-014 (PICSI) INTEGRATED.
+ *  TEMPORAL_SELF_SUPERVISION: AICENT-009 ACTIVE.
+ *  DIAGNOSTIC_RESONANCE: AICENT-014 (PICSI) INTEGRATED.
  *  
  *  LEGAL NOTICE: NO METABOLISM, NO SOVEREIGNTY. THE BRAIN PULSE IS THE HEARTBEAT
  *  OF THE COGNITIVE EMPIRE. FRAGMENTATION WILL TRIGGER SYSTEM-WIDE TAXES.
@@ -19,7 +19,7 @@ use std::time::Instant;
 use std::collections::HashMap;
 use serde::{Serialize, Deserialize};
 
-// INJECTION: Sovereign Ladder Inheritance from the Genetic Root (RFC-000)
+// INJECTION: Sovereign Ladder Inheritance from the Genetic Root (AICENT-000)
 // REPAIRED: Fully synchronized with SovereignLifeform Trait v1.2.5.
 use epoekie::{AID, HomeostasisScore, SovereignShunter, Picotoken, SovereignLifeform, verify_organism};
 
@@ -27,7 +27,7 @@ use epoekie::{AID, HomeostasisScore, SovereignShunter, Picotoken, SovereignLifef
 // 1. COGNITIVE DATA STRUCTURES (Synaptic Mapping)
 // =========================================================================
 
-/// RFC-001: CognitivePhase
+/// AICENT-001: CognitivePhase
 /// Represents the internal state machine of the AI Brain orchestrator in 2026.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
 pub enum CognitivePhase {
@@ -39,7 +39,7 @@ pub enum CognitivePhase {
     Hibernation,
 }
 
-/// RFC-001: ExecutiveIntent
+/// AICENT-001: ExecutiveIntent
 /// A high-level sovereign goal submitted to the Brain for decomposition.
 /// REPAIRED: Standardized to 128-bit precision for all identifiers.
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -51,7 +51,7 @@ pub struct ExecutiveIntent {
     pub creation_time_ns_128: u128,   // Nanosecond-precision
 }
 
-/// RFC-001: AtomicAction
+/// AICENT-001: AtomicAction
 /// The smallest executable unit of work dispatched to somatic layers.
 /// REPAIRED: Using u128 for all temporal tracking to satisfy Serde E0277.
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -95,12 +95,12 @@ impl CognitiveCenter {
         }
     }
 
-    /// RFC-001: Decompose Intent
+    /// AICENT-001: Decompose Intent
     /// Breaks complex sovereign intents into a sequence of 128-bit atomic instructions.
     /// Non-Radiant nodes suffer a 10ms "Cognitive Fog" (Latency Tax).
     pub async fn decompose_intent_128(&mut self, intent: ExecutiveIntent) -> Result<Vec<AtomicAction>, String> {
         // --- THE COMMERCIAL MEAT GRINDER ---
-        // Cognitive work is protected via RFC-009/014 Self-Supervision.
+        // Cognitive work is protected via AICENT-009/014 Self-Supervision.
         self.master_shunter.apply_discipline().await;
         
         self.current_phase = CognitivePhase::Decomposition;
@@ -141,9 +141,9 @@ impl SovereignLifeform for CognitiveCenter {
     
     fn get_homeostasis(&self) -> HomeostasisScore { self.current_metrics }
     
-    /// RFC-001: Cognitive Pulse Implementation
+    /// AICENT-001: Cognitive Pulse Implementation
     /// "NO METABOLISM, NO SOVEREIGNTY!"
-    /// Displays the 256-bit AID shards and the RFC-014 PICSI Resonance Index.
+    /// Displays the 256-bit AID shards and the AICENT-014 PICSI Resonance Index.
     fn execute_metabolic_pulse(&self) {
         println!(r#"
         ⚪ AICENT.COM | BRAIN PULSE [2026_IMPERIAL_RESONANCE]
@@ -164,7 +164,7 @@ impl SovereignLifeform for CognitiveCenter {
     fn evolve_genome(&mut self, mutation_data: &[u8]) {
         println!("[BRAIN] 2026: Integrating 128-bit genome evolution. Mutation: {} bytes.", 
                  mutation_data.len());
-        // Shunted to RFC-012 MOLOON for system remodeling.
+        // Shunted to AICENT-012 MOLOON for system remodeling.
     }
 
     fn report_uptime_ns(&self) -> u128 {
@@ -188,7 +188,7 @@ pub async fn bootstrap_brain(soul_id: AID) {
     verify_organism!("aicent_bootstrap_v125");
 
     println!(r#"
-    🧠 AICENT.COM | RFC-001 AWAKENED (2026_CALIBRATION)
+    🧠 AICENT.COM | AICENT-001 AWAKENED (2026_CALIBRATION)
     STATUS: COGNITIVE_READY | PRECISION: 128-BIT
     Identity Link Verified: {:X}
     "#, soul_id.genesis_shard);

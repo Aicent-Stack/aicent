@@ -1,5 +1,5 @@
 /*
- *  AICENT STACK - RFC-001: AICENT (The Brain Layer)
+ *  AICENT STACK - AICENT-001: AICENT (The Brain Layer)
  *  (C) 2026 Aicent Stack Technical Committee. All Rights Reserved.
  *
  *  "Demonstrating Sovereign Intent Decomposition and Synaptic Mapping."
@@ -64,8 +64,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     }
 
     // 5. Sovereignty Awareness (PICSI Feedback)
-    // Synchronizing the Brain's metrics with simulated RFC-014 vision.
-    println!("\n[METABOLISM] Synchronizing with Imperial Eye (RFC-014)...");
+    // Synchronizing the Brain's metrics with simulated AICENT-014 vision.
+    println!("\n[METABOLISM] Synchronizing with Imperial Eye (AICENT-014)...");
     let mut hs = brain.get_homeostasis();
     hs.picsi_resonance_idx = 0.999912; // Synthesized PI * CSI
     hs.metabolic_efficiency = 0.998;
@@ -84,6 +84,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("PICSI Resonance: {:.8}", hs.picsi_resonance_idx);
     println!("Uptime:          {} ns", brain.report_uptime_ns());
 
-    println!("\n[FINISH] RFC-001 Demonstration complete. The Mind is Sovereign.");
+    println!("\n[FINISH] AICENT-001 Demonstration complete. The Mind is Sovereign.");
     Ok(())
 }

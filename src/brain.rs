@@ -1,5 +1,5 @@
 /*
- *  AICENT STACK - RFC-001: AICENT (The Brain Layer)
+ *  AICENT STACK - AICENT-001: AICENT (The Brain Layer)
  *  (C) 2026 Aicent Stack Technical Committee. All Rights Reserved.
  *
  *  "Master orchestration layer with 128-bit atomic synaptic manifolds."
@@ -13,7 +13,7 @@ use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use std::time::Instant;
 
-// INJECTION: Sovereign Ladder Inheritance from the Genetic Root (RFC-000)
+// INJECTION: Sovereign Ladder Inheritance from the Genetic Root (AICENT-000)
 // We utilize the 128-bit genome to drive the cognitive center.
 use epoekie::{AID, HomeostasisScore, SovereignShunter, Picotoken, SovereignLifeform, verify_organism};
 
@@ -21,7 +21,7 @@ use epoekie::{AID, HomeostasisScore, SovereignShunter, Picotoken, SovereignLifef
 // 1. SYNAPTIC DATA STRUCTURES (128-Bit Manifolds)
 // =========================================================================
 
-/// RFC-001: AtomicInstruction
+/// AICENT-001: AtomicInstruction
 /// The smallest executable unit of intent after 128-bit decomposition.
 /// Aligned with RTTP Pulse Frames for < 200us conduction.
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -29,21 +29,21 @@ pub struct AtomicInstruction_128 {
     pub instruction_id: u128,         // IMPERIAL_128_BIT_ID
     pub target_subsystem_hash: [u8; 16], 
     pub payload_vector: Vec<u8>,     // 64-byte aligned intent payload
-    pub metabolic_cost: Picotoken,   // Cleared via ZCMK (RFC-004)
+    pub metabolic_cost: Picotoken,   // Cleared via ZCMK (AICENT-004)
 }
 
-/// RFC-001: CognitiveSynapse
+/// AICENT-001: CognitiveSynapse
 /// A hardware-locked 128-bit atomic state manifold.
 /// Packs [64-bit Reputation | 64-bit Epoch] for sub-nanosecond triage.
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct CognitiveSynapse_128 {
     pub aid: AID,
     pub packed_state_128: u128,      // [Reputation (f64) | Epoch (u64)]
-    pub last_picsi_score: f64,       // RFC-014 Feedback
+    pub last_picsi_score: f64,       // AICENT-014 Feedback
     pub resonance_timestamp_ns: u128, 
 }
 
-/// RFC-001: SynapticPulse
+/// AICENT-001: SynapticPulse
 /// The atomic output of a brain reasoning cycle, ready for neural dispatch.
 pub struct SynapticPulse {
     pub originating_aid: AID,
@@ -78,7 +78,7 @@ impl BrainEngine {
         }
     }
 
-    /// [RFC-001] Cognitive Intent Decomposition.
+    /// [AICENT-001] Cognitive Intent Decomposition.
     /// Shatters high-level symbolic intent into 128-bit atomic instructions.
     /// Optimized for < 188.4µs cognitive finality in the Observer Epoch.
     pub async fn decompose_intent_128(
@@ -117,7 +117,7 @@ impl BrainEngine {
         })
     }
 
-    /// [RFC-009] Atomic Identity Calibration.
+    /// [AICENT-009] Atomic Identity Calibration.
     /// Updates an AID's standing in a single CPU instruction via 128-bit bitshifts.
     pub fn recalibrate_standing_128(&mut self, aid_hash: [u8; 16], new_rep: f64, new_epoch: u64) {
         if let Some(synapse) = self.active_synapses.get_mut(&aid_hash) {
@@ -128,7 +128,7 @@ impl BrainEngine {
         }
     }
 
-    /// RFC-014: PICSI Synchronization.
+    /// AICENT-014: PICSI Synchronization.
     /// Adjusts cognitive load based on the real-time Radiance Score.
     pub fn sync_with_imperial_eye(&mut self, picsi_score: f64) {
         if picsi_score < 0.998 {
@@ -166,7 +166,7 @@ impl SovereignLifeform for BrainEngine {
     }
 
     fn evolve_genome(&mut self, _mutation: &[u8]) {
-        // System self-remodeling via RFC-012 MOLOON
+        // System self-remodeling via AICENT-012 MOLOON
         println!("[BRAIN_EVOLVE] 2026: Hardening synaptic pathways.");
     }
 
