@@ -7,7 +7,7 @@
 
 > **"This is not infrastructure for intelligence. This is intelligence itself."**
 
-**⚪ [AICENT](http://aicent.com) | 💎 [RTTP](http://rttp.com) | 🔴 [RPKI](http://rpki.com) | 🟢 [ZCMK](http://zcmk.com) | 🟡 [GTIOT](http://gtiot.com) | 🟣 [AICENT-NET](http://aicent.net) | 🎭 [BEWHO](http://bewho.com) | 🌿 [epoekie](http://epoekie.com) | 👁️ [PICSI](http://picsi.com)**
+**⚪ [AICENT](http://aicent.com) | 💎 [RTTP](http://rttp.com) | 🔴 [RPKI](http://rpki.com) | 🟢 [ZCMK](http://zcmk.com) | 🟡 [GTIOT®](http://gtiot.com) | 🟣 [AICENT-NET](http://aicent.net) | 🎭 [BEWHO®](http://bewho.com) | 🌿 [epoekie](http://epoekie.com) | 👁️ [PICSI®](http://picsi.com)**
 
 ---
 # 🧠 AICENT-001: AICENT (The Imperial Brain)
@@ -22,7 +22,7 @@
 **[STATUS: PRIVATE_EVOLUTION_ACTIVE]**  
 As of **Version 1.3.0-Alpha**, the internal cognitive manifolds of `aicent` have transitioned to **Sovereign Private Mode**. This repository provides the **Interface Specifications** for the Intent Factory, Synaptic Cortex, and Evolutionary Scheduler.
 
-The human-scale latency of V1.2.5 (161.8µs) has been collapsed into the **349ns Hyper-Radiant Reflex**, optimized for the **MAXCAP Nitro-Engine**.
+The human-scale latency of V1.2.5 (161.8µs) has been collapsed into the **349ns Hyper-Radiant Reflex**, optimized for the **MAXCAP® Nitro-Engine**.
 
 ---
 
@@ -33,7 +33,7 @@ The human-scale latency of V1.2.5 (161.8µs) has been collapsed into the **349ns
 ### 1. Intent Factory (AICENT-001-A)
 The furnace of pure logic. It shatters complex sovereign intents into pillar-specific **AtomicAction128** shards.
 *   **Cognitive Sharding**: Distributes intent across the 17 pillars with zero overlap.
-*   **Metabolic Pricing**: Dynamically calculates the Picotoken cost of an action based on substrate energy draw (ITSUN) and risk (RPKI).
+*   **Metabolic Pricing**: Dynamically calculates the Picotoken cost of an action based on substrate energy draw (ITSUN®) and risk (RPKI).
 *   **Precision**: Every intent is timestamped to the **12ns rising edge**.
 
 ### 2. Synaptic Cortex (AICENT-001-B)
@@ -44,7 +44,7 @@ The clinical 128-bit memory manifold. It tracks the standing, fidelity, and hist
 
 ### 3. Evolutionary Scheduler (AICENT-001-C)
 The master rhythmic balancer. It manages the 1.2kHz heartbeat and prevents "Cognitive Congestion."
-*   **Priority Shunting**: Ensures Somatic (GTIOT) and Nerve (RTTP) intents bypass all administrative noise.
+*   **Priority Shunting**: Ensures Somatic (GTIOT®) and Nerve (RTTP) intents bypass all administrative noise.
 *   **Metabolic Load Balancing**: Distributes computational work to prevent thermal pathogens (Substrate overheats).
 *   **Reflex Optimization**: Achieves the **349ns end-to-end cognitive loop** in release mode.
 
